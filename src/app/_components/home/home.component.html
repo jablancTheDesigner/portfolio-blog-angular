@@ -1,24 +1,52 @@
 <app-hero heroClass="hero--main">
-    <div class="container">
-        <div class="row">
-            <div class="col col-6">
-                <div class="headline">
-                    <div class="headline__text">
-                        <h1>
-                            Headline Text got to get the people goin'
-                        </h1>
-                    </div>
-                    <div class="headline__sub-text">
-                        <p>
-                            This is the supporting text. Some text about ya boy. Somthin slight no pressha! Brief
-                            description that descrbes who da hell I am and what Im here for. Ya, Dig!
-                        </p>
+    <div class="md:relative container mx-auto px-3">
+        <div class="md:min-h-screen md:flex md:items-center">
+            <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-10">
+                <div class="headline p-6 md:w-1/2 flex items-end justify-between md:sticky">
+                    <h1 class="headline__text  w-full z-10">
+                        Headline Text got to get the people goin'
+                    </h1>
+                    <p class="headline__sub-text md:sticky md:top-0">
+                        This is the supporting text. Some text about ya boy. Somthin slight no pressha! Brief
+                        description that descrbes who da hell I am and what Im here for. Ya, Dig!
+                    </p>
+                </div>
+                <div class="md:min-h-screen py-6 md:py-12 flex items-center md:w-1/2 md:z-40">
+                    <div class="w-full grid lg:grid-cols-2 gap-2 xl:gap-8">
+                        <app-layout *ngFor="let number of [0,1,2,3,4]"></app-layout>
                     </div>
                 </div>
             </div>
-            <div class="col col-6">
-                projects
-            </div>
         </div>
+
     </div>
 </app-hero>
+
+<section class="current-job">
+    <div class="container mx-auto px-3 text-center">
+
+        <div class="current-job__title relative ">
+            <h1 class="text-left mb-2">Recent Job Title</h1>
+            <span class="current-job__company text-left">Westgate Resorts</span>
+            <span class="current-job__position">Software Engineer III</span>
+            <span class="current-job__duration text-right">2021 - Current</span>
+        </div>
+
+        <br>
+
+        <div class="current-job__title current-job--md relative ">
+            <span class="current-job__company text-left">Westgate Resorts</span>
+            <span class="current-job__position">Software Engineer II</span>
+            <span class="current-job__duration text-right">2019 - 2021</span>
+        </div>
+
+        <br>
+
+        <div class="current-job__title current-job--sm relative ">
+            <span class="current-job__company text-left">Global Tect Network</span>
+            <span class="current-job__position">Creative Director / Frontend Developer</span>
+            <span class="current-job__duration text-right">2017 - 2019</span>
+        </div>
+
+    </div>
+</section>

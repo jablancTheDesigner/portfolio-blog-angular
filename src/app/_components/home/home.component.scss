@@ -1,11 +1,11 @@
-$main-color: #003366;
+$main: #003366;
 
 .headline {
     background-color: #fff;
-    color: $main-color;
-    padding: 2rem;
+    color: $main;
+    max-height: calc(100vh - 182px);
+    top: 91px;
     display: flex;
-    min-height: calc(100vh - 150px);
     flex-direction: column;
 
     &__content {
@@ -13,16 +13,154 @@ $main-color: #003366;
     }
 
     &__text{
-        font-size: 2rem;
+        font-size: 4rem;
         line-height: 1;
         margin-bottom: 5rem;
         letter-spacing: -0.2rem;
-        text-transform: capitalize;
+        font-weight: 700;
     }
     &__sub-text{
         font-size: .875rem;
         line-height: 1.4;
         margin-top: auto;
         color: #777;
+    }
+}
+
+.current-job{
+    padding: 91px 0;
+    background-color: #eeeeee;
+    color: $main;
+    h1{
+        font-size: 2rem;
+        font-weight:700;
+        margin-bottom: 2rem;
+    }
+    &__title{
+        display: inline-block;
+        position: relative;
+        margin-bottom: 75px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 2px;
+            height: 70px;
+            background-color: #777;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+
+        &:last-of-type{
+            margin-bottom: 0;
+            &:after{
+                content: '';
+                display: none;
+            }
+        }
+
+    }
+
+    &__company,
+    &__duration {
+        font-size: 2rem;
+        font-style: italic;
+    }
+
+    &__company{
+        text-align: left;
+        display: block;
+    }
+
+    &__position{
+        font-size: 5rem;
+        line-height: 1;
+        letter-spacing: -0.2rem;
+        font-weight: 700;
+        color: $main;
+        display: inline-block;
+    }
+    &__duration{
+        text-align: right;
+        display: block;
+    }
+
+    &--md,
+    &--sm {
+        .current-job__position,
+        .current-job__duration,
+        .current-job__company {
+            letter-spacing: normal;
+            opacity: 0.75;
+        }
+    }
+
+    &--md{
+        .current-job__position{
+            font-size: 2rem;
+        }
+        .current-job__duration,
+        .current-job__company {
+            font-size: 1rem;
+        }
+    }
+    &--sm{
+        .current-job__position{
+            font-size: 1rem;
+        }
+        .current-job__duration,
+        .current-job__company {
+            font-size: 0.75rem;
+        } 
+    }
+
+    @media screen and (max-width:1024px){
+
+        &__position{
+            font-size: 2.5rem;
+            letter-spacing: normal;
+        }
+
+        &__company,
+        &__duration {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        &--md,
+        &--sm{
+            opacity: 0.65;
+            color: #777;
+            .current-job__position{
+                font-size: 1.5rem;
+                color: #777;
+            }
+            .current-job__duration,
+            .current-job__company {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    @media screen and (max-width:767px){
+        &__position{
+            font-size: 1.5rem;
+            letter-spacing: normal;
+        }
+
+        &__company,
+        &__duration {
+            font-size: 0.75rem;
+        }
+
+        &--md,
+        &--sm{
+            .current-job__position{
+                font-size: 1rem;
+            }
+        }
+        
+
     }
 }
