@@ -1,0 +1,28 @@
+$main-color: #003366;
+
+.headline {
+    background-color: #fff;
+    color: $main-color;
+    padding: 2rem;
+    display: flex;
+    min-height: calc(100vh - 150px);
+    flex-direction: column;
+
+    &__content {
+        margin-top: auto;
+    }
+
+    &__text{
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 5rem;
+        letter-spacing: -0.2rem;
+        text-transform: capitalize;
+    }
+    &__sub-text{
+        font-size: .875rem;
+        line-height: 1.4;
+        margin-top: auto;
+        color: #777;
+    }
+}

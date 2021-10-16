@@ -1,0 +1,16 @@
+$main-color: #003366;
+
+.hero {
+    padding: 75px 0;
+    min-height: 75px;
+    background-color: #eee;
+
+    &--main{
+        background-color: $main-color;
+        min-height: 300px;
+    }
+
+    &-content{
+        text-align: center;
+    }
+}

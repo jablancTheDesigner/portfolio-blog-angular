@@ -1,0 +1,48 @@
+$main: #003366;
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    display: flex;
+    align-items: center;
+
+    &__logo{
+        padding: 0 1.5rem;
+        margin-top: 1rem;
+        svg{
+            width: 40px;  
+        }
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    &__link-list{
+        display: flex;
+        list-style: none;
+        padding:1rem 1.5rem;
+        background-color: $main;
+    }
+    &__link{
+        padding: 0 1rem;
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            opacity: 1;
+            transition: 350ms ease-in-out;
+            text-shadow: 1px 1px $main;
+            font-size: 0.875rem;
+            &:hover,
+            &.active-link {
+                opacity: 0.5;
+            }
+        }
+    }
+}
