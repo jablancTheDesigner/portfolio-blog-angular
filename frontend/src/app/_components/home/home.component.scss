@@ -92,7 +92,8 @@ $main: #003366;
         .current-job__duration,
         .current-job__company {
             letter-spacing: normal;
-            opacity: 0.75;
+            opacity: 0.65;
+            color: #777;
         }
     }
 
@@ -130,8 +131,6 @@ $main: #003366;
 
         &--md,
         &--sm{
-            opacity: 0.65;
-            color: #777;
             .current-job__position{
                 font-size: 1.5rem;
                 color: #777;
