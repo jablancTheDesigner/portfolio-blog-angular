@@ -1,8 +1,10 @@
+<app-navigation></app-navigation>
+
 <app-hero heroClass="hero--main">
     <div class="md:relative container mx-auto px-3">
         <div class="md:min-h-screen md:flex md:items-center">
-            <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-10">
-                <div class="headline p-6 md:w-1/2 flex items-end justify-between md:sticky">
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
+                <div class="headline p-6  md:w-1/2 flex items-end justify-between md:sticky">
                     <h1 class="headline__text  w-full z-10">
                         Headline Text got to get the people goin'
                     </h1>
@@ -11,9 +13,9 @@
                         description that descrbes who da hell I am and what Im here for. Ya, Dig!
                     </p>
                 </div>
-                <div class="md:min-h-screen py-6 md:py-12 flex items-center md:w-1/2 md:z-40">
-                    <div class="w-full grid lg:grid-cols-2 gap-2 xl:gap-8">
-                        <app-layout *ngFor="let number of [0,1,2,3,4]"></app-layout>
+                <div class="md:min-h-screen py-6 md:py-12 flex items-start md:w-1/2 md:z-40">
+                    <div class="w-full grid  sm:grid-cols-2 gap-4 xl:gap-4">
+                        <app-project *ngFor="let project of projects" [project]="project"></app-project>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,8 @@ import { ProjectsComponent } from './_components/projects/projects.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 import { LayoutComponent } from './_components/layout/layout.component';
 import { LogoComponent } from './_components/logo/logo.component';
+import { ProjectComponent } from './_components/project/project.component';
+import { ProjectDetailComponent } from './_components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LogoComponent } from './_components/logo/logo.component';
     ProjectsComponent,
     PageNotFoundComponent,
     LayoutComponent,
-    LogoComponent
+    LogoComponent,
+    ProjectComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

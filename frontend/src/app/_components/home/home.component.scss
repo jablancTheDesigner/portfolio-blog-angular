@@ -25,6 +25,10 @@ $main: #003366;
         margin-top: auto;
         color: #777;
     }
+    @media screen and (max-width:767px){
+        max-height: 100%;
+    }
+    
 }
 
 .current-job{
