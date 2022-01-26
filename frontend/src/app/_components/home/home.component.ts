@@ -17,11 +17,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
+      console.log(data)
       if (data.projects) {
         this.projects = data.projects.data;
       }
     })
-
   }
 
 }

@@ -4,20 +4,20 @@
     <div class="md:relative container mx-auto px-3">
         <div class="md:min-h-screen md:flex md:items-center">
             <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
-                <div class="headline p-6  md:w-1/2 flex items-end justify-between md:sticky">
-                    <h1 class="headline__text  w-full z-10">
-                        Headline Text got to get the people goin'
-                    </h1>
-                    <p class="headline__sub-text md:sticky md:top-0">
-                        This is the supporting text. Some text about ya boy. Somthin slight no pressha! Brief
-                        description that descrbes who da hell I am and what Im here for. Ya, Dig!
-                    </p>
-                </div>
-                <div class="md:min-h-screen py-6 md:py-12 flex items-start md:w-1/2 md:z-40">
-                    <div class="w-full grid  sm:grid-cols-2 gap-4 xl:gap-4">
-                        <app-project *ngFor="let project of projects" [project]="project"></app-project>
+                <div class="headline  md:w-2/3 flex items-end justify-between md:sticky">
+                    <div class="headline__text  w-full z-10 text-center md:text-left">
+                        <p class="mb-6">Hello &amp; Welcome</p>
+                        <h1>I'm <b>Jahmal Blanchard</b>, a frontend focused software engineer dedicated in building
+                            modern user interfaces and experiences </h1>
                     </div>
                 </div>
+                <ng-container *ngIf="projects">
+                    <div class="md:min-h-screen py-6 md:py-12 flex items-start md:w-1/3 md:z-40">
+                        <div class="w-full grid  sm:grid-cols-2 gap-4 xl:gap-4">
+                            <app-project *ngFor="let project of projects" [project]="project"></app-project>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
         </div>
 

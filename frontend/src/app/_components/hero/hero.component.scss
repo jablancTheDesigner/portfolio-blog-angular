@@ -1,7 +1,6 @@
 $main-color: #003366;
 
 .hero {
-    padding: 91px 0;
     min-height: 75px;
     background-color: #eee;
 
@@ -12,5 +11,9 @@ $main-color: #003366;
 
     &-content{
         text-align: center;
+    }
+
+    @media screen and (max-width: 768px){
+        padding: 91px 0;
     }
 }
