@@ -30,7 +30,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "https://jablancthedesigner.github.io/portfolio-blog-angular/"
           },
           "configurations": {
             "production": {
@@ -119,6 +120,12 @@
             "production": {
               "devServerTarget": "portfolioAngular2021:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://jablancthedesigner.github.io/portfolio-blog-angular/"
           }
         }
       }
