@@ -1,19 +1,22 @@
 $main-color: #003366;
 
 .hero {
-    min-height: 75px;
+    min-height: 150px;
     background-color: #eee;
 
     &--main{
         background-color: $main-color;
-        min-height: 300px;
     }
 
     &-content{
         text-align: center;
     }
 
-    @media screen and (max-width: 768px){
-        padding: 91px 0;
+    @media screen and (max-width: 767px){
+        padding: 50px;
+
+        &--main{
+            padding: 130px 0 50px;
+        }
     }
 }

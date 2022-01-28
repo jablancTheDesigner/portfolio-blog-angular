@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-  @Input() heroClass: string = '';
+  @Input() isMain: boolean = false;
 
   constructor() { }
 

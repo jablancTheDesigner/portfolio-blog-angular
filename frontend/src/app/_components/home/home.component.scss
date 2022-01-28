@@ -1,5 +1,6 @@
 $main: #003366;
 $white: #ffffff;
+$second: #c28944;
 
 .headline {
     color: $white;
@@ -7,6 +8,7 @@ $white: #ffffff;
     top: 91px;
     display: flex;
     flex-direction: column;
+    padding-top: 90px;
 
     &__content {
         margin-top: auto;
@@ -14,19 +16,21 @@ $white: #ffffff;
 
     &__text{
         line-height: 1;
-        color: #ccc;
+        color: $white;
 
         b{
             font-weight: 700;
-            color: $white;
+            color: $second;
         }
         h1{
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight:100;
             letter-spacing: -0.05rem;
         }
         p{
             font-size: 1.5rem;
+            display: inline-block;
+            border-bottom: 2px solid $second;
         }
     }
     &__sub-text{
@@ -42,10 +46,11 @@ $white: #ffffff;
             line-height: 1.4;
         }
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width:767px){
         max-height: 100%;
         max-width: 500px;
         margin: auto;
+        padding-top: 0;
 
         &__text{
             h1{

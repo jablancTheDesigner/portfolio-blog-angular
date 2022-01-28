@@ -12,12 +12,15 @@ import { FindProjectByIdResolverService } from './routing/resolves/project/find-
 const routes: Routes = [
   {
     path: '',
-    resolve: {
-      projects: FindProjectsResolverService
+    data: {
+      isMainNav: true
     },
     component: HomeComponent
   },
-  { path: 'blog', component: BlogComponent },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
   {
     path: 'projects',
     resolve: {
