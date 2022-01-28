@@ -1,11 +1,10 @@
-$main-color: #003366;
+$main: #003366;
 
 .hero {
-    min-height: 150px;
-    background-color: #eee;
+    padding: 1.5rem;
 
     &--main{
-        background-color: $main-color;
+        background-color: $main;
     }
 
     &-content{

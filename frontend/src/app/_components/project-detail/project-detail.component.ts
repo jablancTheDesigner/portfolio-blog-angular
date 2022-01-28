@@ -21,8 +21,8 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.data.subscribe(data => {
       console.log(data)
-      if (data.project.data) {
-        this.project = data.project.data;
+      if (data.project) {
+        this.project = data.project;
       }
     })
   }

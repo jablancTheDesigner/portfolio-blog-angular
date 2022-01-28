@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsHttpService } from 'src/app/http/projects-http.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  posts: any[] = [];
+
   color = 'color-main';
 
-  constructor() { }
+  constructor(private projectsHttpService: ProjectsHttpService) { }
 
   ngOnInit() {
+    this.projectsHttpService.findPosts().then(data => this.posts = data)
   }
 
 }

@@ -1,15 +1,10 @@
-<a class="group relative" href="/project/{{project.id}}">
+<a class="project-image-card group relative" href="/project/{{project.id}}">
     <div class="relative overflow-hidden w-full transition-all h-112 xl:h-112">
-        <div *ngIf="project.thumbnail">
-            <img src="http://localhost:1337{{project.thumbnail.url}}" alt="">
-        </div>
-        <div *ngIf="!project.thumbnail">
-            <img src="https://via.placeholder.com/750x469" alt="">
-        </div>
+        <img src="https://via.placeholder.com/750x469" alt="">
     </div>
     <div class="flex text-center pt-2 space-x-1">
-        <span class="text-sm md:text-base text-white">
-            {{project.name}}
-        </span>
+        <h2 class="text-sm md:text-base">
+            {{project.title}}
+        </h2>
     </div>
 </a>
