@@ -30,8 +30,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "https://jablancthedesigner.github.io/portfolio-blog-angular/"
+            "scripts": []
           },
           "configurations": {
             "production": {
