@@ -13,6 +13,8 @@ export class ProjectDetailComponent implements OnInit {
   id: number = null;
   error: string = null;
   color = 'color-main';
+  projectDescription: string = '';
+  tools: any;
 
   constructor(
     private router: Router,
@@ -23,8 +25,21 @@ export class ProjectDetailComponent implements OnInit {
       console.log(data)
       if (data.project) {
         this.project = data.project;
+        this.parseDescription(this.project);
+        this.checkToole(this.project)
       }
     })
+  }
+
+  parseDescription = (data: any) => {
+    console.log(data.description)
+    this.projectDescription = data.description;
+    // this.parseDescription = data;
+  }
+
+
+  checkToole = (data: any) => {
+    this.tools = data.tools.length > 0 ? data.tools : null;
   }
 
 }

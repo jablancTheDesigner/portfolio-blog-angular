@@ -5,6 +5,7 @@ $main: #003366;
 
     &--main{
         background-color: $main;
+        padding: 0;
     }
 
     &-content{
@@ -12,10 +13,9 @@ $main: #003366;
     }
 
     @media screen and (max-width: 767px){
-        padding: 50px;
 
         &--main{
-            padding: 130px 0 50px;
+            padding: 170px 1rem 80px;
         }
     }
 }

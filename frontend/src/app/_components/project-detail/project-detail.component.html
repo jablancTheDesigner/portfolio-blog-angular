@@ -10,15 +10,22 @@
                     </h1>
 
                     <div class="w-full text-left md:sticky">
-                        <p><span class="font-bold">Client:</span>
-                            Client Name
-                        </p>
+                        <p><span class="font-bold">Client:</span> {{project.client}} </p>
+
                         <p> <span class="font-bold">URL:</span>
-                            <a href="https://www.swtglaw.com" class="font-bold ml-1">Client Url</a>
+                            <span *ngIf="!project.url.link">N/A</span>
+                            <a href="{{project.url.link}}" class="font-bold ml-1"
+                                *ngIf="project.url.link">{{project.url.name}}</a>
                         </p>
+
                         <p> <span class="font-bold">Tools:</span>
-                            Tools Used
+                            <span *ngIf="!tools">N/A</span>
                         </p>
+
+                        <ul *ngIf="tools">
+                            <li *ngFor="let tool of tools">{{tool.name}}</li>
+                        </ul>
+
                     </div>
 
                 </div>
@@ -26,9 +33,9 @@
                     <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-2 font-bold tracking-tighter">
                         Description.</h1>
                     <div class="mb-4">
-                        <p class="text-gray-500 text-sm">
-                            {{project.description}}
-                        </p>
+                        <div class="text-gray-500 text-sm">
+                            {{projectDescription}}
+                        </div>
                     </div>
                     <div *ngIf="project.thumbnail" class="mb-4">
                         <img src="http://localhost:1337{{project.thumbnail.formats.medium.url}}" alt="">

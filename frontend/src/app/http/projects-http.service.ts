@@ -7,20 +7,15 @@ import axios from 'axios';
 export class ProjectsHttpService {
 
   projects: any[] = [
-    { id: 1, title: 'title 1', description: 'Something' },
-    { id: 2, title: 'title 2' },
-    { id: 3, title: 'title 3' },
-    { id: 4, title: 'title 4' }
+    {
+      id: 1,
+      title: 'title 1',
+      client: 'Smith & Williams Trial Group',
+      url: { link: '', name: '' },
+      tools: [],
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Nunc scelerisque viverra mauris in aliquam sem fringilla. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Habitant morbi tristique senectus et netus et malesuada fames. Mi quis hendrerit dolor magna eget.'
+    },
   ];
-  posts: any[] = [
-    { id: 1, title: 'post 1' },
-    { id: 2, title: 'post 2' },
-    { id: 3, title: 'post 3' },
-    { id: 4, title: 'post 4' }
-  ];
-
-  baseUrl = 'http://localhost:1337';
-  projectsUrl = this.baseUrl + '/projects/';
 
   constructor() { }
 
@@ -33,19 +28,6 @@ export class ProjectsHttpService {
   findProjectById(id: number): Promise<any> {
     return new Promise((res, rej) => {
       let output = this.projects.find(project => project.id == id);
-      res(output);
-    })
-  }
-
-  findPosts(): Promise<any[]> {
-    return new Promise((res, rej) => {
-      res(this.posts);
-    })
-  }
-
-  findPostById(id: number): Promise<any> {
-    return new Promise((res, rej) => {
-      let output = this.posts.find(post => post.id == id);
       res(output);
     })
   }

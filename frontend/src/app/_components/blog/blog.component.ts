@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsHttpService } from 'src/app/http/projects-http.service';
+import { PostsHttpService } from 'src/app/http/posts-http.service';
 
 @Component({
   selector: 'app-blog',
@@ -12,10 +12,10 @@ export class BlogComponent implements OnInit {
 
   color = 'color-main';
 
-  constructor(private projectsHttpService: ProjectsHttpService) { }
+  constructor(private postsHttpService: PostsHttpService) { }
 
   ngOnInit() {
-    this.projectsHttpService.findPosts().then(data => this.posts = data)
+    this.postsHttpService.findPosts().then(data => this.posts = data)
   }
 
 }

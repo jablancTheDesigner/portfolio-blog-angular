@@ -23,9 +23,10 @@ $second: #c28944;
             color: $second;
         }
         h1{
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight:100;
-            letter-spacing: -0.05rem;
+            letter-spacing: -0.15rem;
+            line-height: .9;
         }
         p{
             font-size: 1.5rem;
@@ -69,11 +70,9 @@ $second: #c28944;
 }
 
 .current-job{
-    padding: 91px 0;
     background-color: #eeeeee;
     color: $main;
     h1{
-        font-size: 2rem;
         font-weight:700;
         margin-bottom: 2rem;
     }
