@@ -10,6 +10,8 @@
         margin-left: auto;
         background-color: $main;
         color: $second;
-        font-style: italic;
+        a{
+            font-style: italic;
+        }
     }
 }

@@ -30,7 +30,7 @@ export class ProjectsHttpService {
       title: 'Countdown Me Down App',
       client: 'Freelance',
       logo: '',
-      url: { link: '', name: '' },
+      url: { link: 'https://jablancthedesigner.github.io/countdown-timer/', name: 'Countdown Timer' },
       tools: [],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Nunc scelerisque viverra mauris in aliquam sem fringilla. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Habitant morbi tristique senectus et netus et malesuada fames. Mi quis hendrerit dolor magna eget.'
     },

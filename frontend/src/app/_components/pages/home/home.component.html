@@ -1,12 +1,14 @@
 <app-navigation></app-navigation>
+
 <app-hero isMain="true">
-    <div class="md:min-h-screen md:flex md:items-center">
+    <div class="md:flex md:items-center">
         <div class="md:relative container mx-auto px-3">
             <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
                 <div class="headline md:w-2/3 flex items-center">
                     <div class="headline__text  w-full z-10 text-center md:text-left">
-                        <h1 class="text-5xl font-bold ">Hello. I'm Jahmal Blanchard.</h1>
-                        <h3 class="text-3xl">
+                        <h1 class="text-5xl font-bolder mb-2 md:mb-4 text-4xl md:text-5xl">Hello. I'm Jahmal Blanchard.
+                        </h1>
+                        <h3 class="text-xl md:text-3xl">
                             A <span>frontend</span>
                             focused <span>software engineer</span> with professional
                             experience in building modern <span>user interfaces</span> and
@@ -20,7 +22,7 @@
     </div>
 </app-hero>
 
-<div *ngIf="projects.length > 0">
+<div id="projects" *ngIf="projects.length > 0">
     <div class="container mx-auto">
         <div *ngFor="let project of projects" class="py-4 md:py-8 lg:py-16">
             <app-project-image-card [project]="project"></app-project-image-card>
@@ -28,10 +30,6 @@
     </div>
 </div>
 
-<div class="featured-post" *ngIf="featuredPost">
-    <div class="container mx-auto px-3 text-center">
-        featured post
-    </div>
-</div>
-
 <app-experiences></app-experiences>
+
+<app-blog id="blog" [posts]="posts"></app-blog>

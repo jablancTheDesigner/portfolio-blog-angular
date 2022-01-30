@@ -1,5 +1,4 @@
-$main: #003366;
-$second: #c28944;
+@import "../../../styles/colors";
 
 .nav {
     position: relative;
@@ -33,7 +32,7 @@ $second: #c28944;
         padding: 0 1rem;
         a {
             text-decoration: none;
-            color: #fff;
+            color: $main;
             text-transform: uppercase;
             opacity: 1;
             transition: 350ms ease-in-out;
@@ -45,22 +44,18 @@ $second: #c28944;
         }
     }
 
-    &__link-list{
-        &.color-main{
-            .nav__link{
-                a{
-                    color: $main;
-                }
-            }
-        }
-    }
-
     &--main{
         position: absolute;
         border-bottom: 2px solid $second;
 
         .nav__logo{
             border-right: 2px solid $second;
+        }
+
+        .nav__link{
+            a{
+                color: $white;
+            }
         }
     }
 }

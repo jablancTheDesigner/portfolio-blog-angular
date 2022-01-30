@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlogComponent } from './_components/blog/blog.component';
-import { HomeComponent } from './_components/home/home.component';
+import { BlogComponent } from './_components/pages/blog/blog.component';
+import { HomeComponent } from './_components/pages/home/home.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
-import { ProjectsComponent } from './_components/projects/projects.component';
+import { ProjectsComponent } from './_components/pages/projects/projects.component';
 import { ProjectDetailComponent } from './_components/project-detail/project-detail.component';
 import { FindProjectsResolverService } from './routing/resolves/project/find-projects-resolver.service';
 import { FindProjectByIdResolverService } from './routing/resolves/project/find-project-by-id-resolver.service';

@@ -1,11 +1,9 @@
-@import "../../../styles/colors";
+@import "../../../../styles/colors";
 
 .headline {
-    max-height: calc(100vh - 182px);
     top: 91px;
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
 
     &__content {
         margin-top: auto;
