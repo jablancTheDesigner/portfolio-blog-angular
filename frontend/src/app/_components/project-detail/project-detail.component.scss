@@ -1,5 +1,11 @@
 $main: #003366;
 
+.project-details-card {
+    h1{
+        color: $main;
+    }
+}
+
 .headline {
     color: $main;
     max-height: calc(100vh - 182px);
@@ -14,7 +20,6 @@ $main: #003366;
     &__text{
         font-size: 4rem;
         line-height: 1;
-        margin-bottom: 5rem;
         font-weight: 700;
     }
     &__sub-text{

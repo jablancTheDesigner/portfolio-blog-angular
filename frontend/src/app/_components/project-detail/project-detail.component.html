@@ -1,15 +1,14 @@
 <app-navigation [textClass]="color"></app-navigation>
 
 <app-hero>
-    <div class="md:relative container mx-auto px-3">
+    <div class="project-details-card md:relative container mx-auto px-3">
         <div class="md:min-h-screen md:flex md:items-center">
             <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-10">
                 <div class="headline md:w-1/2 flex items-end justify-between md:sticky">
-                    <h1 class="headline__text  w-full z-10 tracking-tighter">
-                        {{project.title}}
-                    </h1>
-
-                    <div class="w-full text-left md:sticky">
+                    <div class="w-full z-10">
+                        <h1 class="headline__text tracking-tighter py-3">
+                            {{project.title}}
+                        </h1>
                         <p><span class="font-bold">Client:</span> {{project.client}} </p>
 
                         <p> <span class="font-bold">URL:</span>
@@ -25,25 +24,40 @@
                         <ul *ngIf="tools">
                             <li *ngFor="let tool of tools">{{tool.name}}</li>
                         </ul>
+                    </div>
+
+                    <div class="w-full text-left md:sticky md: mt-3">
+
+                        <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-2 font-bold tracking-tighter">
+                            Description.
+                        </h1>
+                        <div class="mb-4">
+                            <div class="text-gray-500 text-sm">
+                                {{projectDescription}}
+                            </div>
+                        </div>
 
                     </div>
 
                 </div>
                 <div class="md:min-h-screen py-6 md:py-12 items-center md:w-1/2 md:z-40">
-                    <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-2 font-bold tracking-tighter">
-                        Description.</h1>
-                    <div class="mb-4">
-                        <div class="text-gray-500 text-sm">
-                            {{projectDescription}}
-                        </div>
-                    </div>
-                    <div *ngIf="project.thumbnail" class="mb-4">
-                        <img src="http://localhost:1337{{project.thumbnail.formats.medium.url}}" alt="">
+
+                    <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-3 font-bold tracking-tighter"
+                        *ngIf="project.logo">
+                        Logo.
+                    </h1>
+                    <div *ngIf="project.logo" class="mb-6">
+                        <img src="{{project.logo.src}}" alt="" />
                     </div>
 
-                    <div *ngIf="!project.thumbnail" class="mb-4">
-                        <img src="https://via.placeholder.com/750x469" alt="">
+                    <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-3 font-bold tracking-tighter"
+                        *ngIf="project.gallery">
+                        Gallery.
+                    </h1>
+                    <div *ngFor="let img of project.gallery" class="mb-6">
+                        <img src="{{img.src}}" alt="" />
                     </div>
+
                 </div>
             </div>
         </div>
