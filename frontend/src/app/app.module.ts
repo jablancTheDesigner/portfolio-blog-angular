@@ -11,8 +11,10 @@ import { ProjectsComponent } from './_components/projects/projects.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 import { LayoutComponent } from './_components/layout/layout.component';
 import { LogoComponent } from './_components/logo/logo.component';
-import { ProjectComponent } from './_components/project/project.component';
+import { ProjectImageCardComponent } from './_components/project-image-card/project-image-card.component';
 import { ProjectDetailComponent } from './_components/project-detail/project-detail.component';
+import { ProjectsListComponent } from './_components/projects-list/projects-list.component';
+import { ExperiencesComponent } from './_components/experiences/experiences.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,10 @@ import { ProjectDetailComponent } from './_components/project-detail/project-det
     PageNotFoundComponent,
     LayoutComponent,
     LogoComponent,
-    ProjectComponent,
-    ProjectDetailComponent
+    ProjectImageCardComponent,
+    ProjectDetailComponent,
+    ProjectsListComponent,
+    ExperiencesComponent
   ],
   imports: [
     BrowserModule,

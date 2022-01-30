@@ -1,9 +1,6 @@
-$main: #003366;
-$white: #ffffff;
-$second: #c28944;
+@import "../../../styles/colors";
 
 .headline {
-    color: $white;
     max-height: calc(100vh - 182px);
     top: 91px;
     display: flex;
@@ -16,17 +13,15 @@ $second: #c28944;
 
     &__text{
         line-height: 1;
-        color: $white;
+        color: rgba(255,255,255,0.5);
 
-        b{
-            font-weight: 700;
-            color: $second;
-        }
+        
         h1{
-            font-size: 3.5rem;
-            font-weight:100;
-            letter-spacing: -0.15rem;
-            line-height: .9;
+            letter-spacing: -0.12rem;
+            color: rgba(255,255,255,1);
+        }
+        span {
+            color: rgba(255,255,255,1);
         }
         p{
             font-size: 1.5rem;
@@ -69,137 +64,3 @@ $second: #c28944;
     
 }
 
-.current-job{
-    background-color: #eeeeee;
-    color: $main;
-    h1{
-        font-weight:700;
-        margin-bottom: 2rem;
-    }
-    &__title{
-        display: inline-block;
-        position: relative;
-        margin-bottom: 75px;
-        &:after{
-            content: '';
-            position: absolute;
-            top: 100%;
-            width: 2px;
-            height: 70px;
-            background-color: #777;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0.5;
-        }
-
-        &:last-of-type{
-            margin-bottom: 0;
-            &:after{
-                content: '';
-                display: none;
-            }
-        }
-
-    }
-
-    &__company,
-    &__duration {
-        font-size: 2rem;
-        font-style: italic;
-    }
-
-    &__company{
-        text-align: left;
-        display: block;
-    }
-
-    &__position{
-        font-size: 5rem;
-        line-height: 1;
-        letter-spacing: -0.2rem;
-        font-weight: 700;
-        color: $main;
-        display: inline-block;
-    }
-    &__duration{
-        text-align: right;
-        display: block;
-    }
-
-    &--md,
-    &--sm {
-        .current-job__position,
-        .current-job__duration,
-        .current-job__company {
-            letter-spacing: normal;
-            opacity: 0.65;
-            color: #777;
-        }
-    }
-
-    &--md{
-        .current-job__position{
-            font-size: 2rem;
-        }
-        .current-job__duration,
-        .current-job__company {
-            font-size: 1rem;
-        }
-    }
-    &--sm{
-        .current-job__position{
-            font-size: 1rem;
-        }
-        .current-job__duration,
-        .current-job__company {
-            font-size: 0.75rem;
-        } 
-    }
-
-    @media screen and (max-width:1024px){
-
-        &__position{
-            font-size: 2.5rem;
-            letter-spacing: normal;
-        }
-
-        &__company,
-        &__duration {
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        &--md,
-        &--sm{
-            .current-job__position{
-                font-size: 1.5rem;
-                color: #777;
-            }
-            .current-job__duration,
-            .current-job__company {
-                font-size: 0.75rem;
-            }
-        }
-    }
-
-    @media screen and (max-width:767px){
-        &__position{
-            font-size: 1.5rem;
-            letter-spacing: normal;
-        }
-
-        &__company,
-        &__duration {
-            font-size: 0.75rem;
-        }
-
-        &--md,
-        &--sm{
-            .current-job__position{
-                font-size: 1rem;
-            }
-        }
-        
-
-    }
-}

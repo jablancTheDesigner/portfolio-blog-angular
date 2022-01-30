@@ -3,10 +3,16 @@
     <div class="md:min-h-screen md:flex md:items-center">
         <div class="md:relative container mx-auto px-3">
             <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
-                <div class="headline md:w-3/4 flex items-center">
+                <div class="headline md:w-2/3 flex items-center">
                     <div class="headline__text  w-full z-10 text-center md:text-left">
-                        <h1>I'm <b>Jahmal Blanchard</b>, a frontend focused software engineer dedicated in building
-                            modern user interfaces and experiences. </h1>
+                        <h1 class="text-5xl font-bold ">Hello. I'm Jahmal Blanchard.</h1>
+                        <h3 class="text-3xl">
+                            A <span>frontend</span>
+                            focused <span>software engineer</span> with professional
+                            experience in building modern <span>user interfaces</span> and
+                            <span>experiences</span>.
+                            <span class="underline">Let's work together.</span>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -14,30 +20,18 @@
     </div>
 </app-hero>
 
-<section class="current-job py-14">
-    <div class="container mx-auto px-3 text-center">
-
-        <div class="current-job__title relative ">
-            <span class="current-job__company text-left">Westgate Resorts</span>
-            <span class="current-job__position">Software Engineer III</span>
-            <span class="current-job__duration text-right">2021 - Current</span>
+<div *ngIf="projects.length > 0">
+    <div class="container mx-auto">
+        <div *ngFor="let project of projects" class="py-4 md:py-8 lg:py-16">
+            <app-project-image-card [project]="project"></app-project-image-card>
         </div>
-
-        <br>
-
-        <div class="current-job__title current-job--md relative ">
-            <span class="current-job__company text-left">Westgate Resorts</span>
-            <span class="current-job__position">Software Engineer II</span>
-            <span class="current-job__duration text-right">2019 - 2021</span>
-        </div>
-
-        <br>
-
-        <div class="current-job__title current-job--sm relative ">
-            <span class="current-job__company text-left">Global Tect Network</span>
-            <span class="current-job__position">Creative Director / Frontend Developer</span>
-            <span class="current-job__duration text-right">2017 - 2019</span>
-        </div>
-
     </div>
-</section>
+</div>
+
+<div class="featured-post" *ngIf="featuredPost">
+    <div class="container mx-auto px-3 text-center">
+        featured post
+    </div>
+</div>
+
+<app-experiences></app-experiences>

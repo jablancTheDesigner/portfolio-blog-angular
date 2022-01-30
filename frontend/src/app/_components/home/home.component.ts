@@ -9,7 +9,9 @@ import axios from 'axios';
 })
 export class HomeComponent implements OnInit {
 
-  projects: any = [];
+  projects: any[] = [];
+  posts: any[] = [];
+  featuredPost: any = null;
 
   constructor(
     private router: Router,
@@ -19,7 +21,8 @@ export class HomeComponent implements OnInit {
     this.route.data.subscribe(data => {
       console.log(data)
       if (data.projects) {
-        this.projects = data.projects.data;
+        this.projects = data.projects;
+        this.posts = data.posts
       }
     })
   }

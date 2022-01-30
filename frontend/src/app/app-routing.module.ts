@@ -7,26 +7,33 @@ import { ProjectsComponent } from './_components/projects/projects.component';
 import { ProjectDetailComponent } from './_components/project-detail/project-detail.component';
 import { FindProjectsResolverService } from './routing/resolves/project/find-projects-resolver.service';
 import { FindProjectByIdResolverService } from './routing/resolves/project/find-project-by-id-resolver.service';
+import { FindPostsResolverService } from './routing/resolves/posts/find-posts-resolver.service';
 
 
 const routes: Routes = [
   {
     path: '',
-    data: {
-      isMainNav: true
-    },
-    component: HomeComponent
-  },
-  {
-    path: 'blog',
-    component: BlogComponent
-  },
-  {
-    path: 'projects',
     resolve: {
-      projects: FindProjectsResolverService
+      projects: FindProjectsResolverService,
+      posts: FindPostsResolverService
     },
-    component: ProjectsComponent
+    children: [
+      {
+        path: '',
+        data: {
+          isMainNav: true
+        },
+        component: HomeComponent
+      },
+      {
+        path: 'projects',
+        component: ProjectsComponent
+      },
+      {
+        path: 'blog',
+        component: BlogComponent
+      },
+    ]
   },
   {
     path: 'project/:id',
