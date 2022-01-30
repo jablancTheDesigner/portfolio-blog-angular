@@ -53,17 +53,26 @@
             </svg>
         </div>
         <div class="nav__links">
-            <ul class="nav__link-list {{textClass}}">
+            <ul class="nav__link-list {{textClass}}" *ngIf="isMain">
                 <li class="nav__link">
-                    <a href="#top" class="opacity-100 hover:opacity-30">Home</a>
+                    <button (click)="goToAnchor('top')" class="text-white">Home</button>
                 </li>
                 <li class=" nav__link">
-                    <a href="#blog" class="opacity-100 hover:opacity-30">Blog</a>
+                    <button (click)="goToAnchor('blog')" class="text-white">Blog</button>
                 </li>
                 <li class="nav__link">
-                    <a href="#projects" class="opacity-100 hover:opacity-30">Projects</a>
+                    <button (click)="goToAnchor('projects')" class="text-white">Projects</button>
+                </li>
+            </ul>
+            <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">
+                <li class="nav__link">
+                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30">Back Home</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<button (click)="goToAnchor('top')" class="backUp transition ease-in-out" (window:scroll)="onWindowScroll($event)"
+    [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem" *ngIf="isMain">Back
+    Up</button>

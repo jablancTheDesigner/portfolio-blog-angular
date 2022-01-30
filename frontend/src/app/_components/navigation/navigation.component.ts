@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-navigation',
@@ -9,7 +9,12 @@ export class NavigationComponent implements OnInit {
 
   @Input() textClass: string;
 
+  @ViewChild('body')
+  body: ElementRef;
+
   isMain: boolean = false;
+
+  displayElem: boolean = false;
 
   constructor(
     private router: Router,
@@ -23,7 +28,25 @@ export class NavigationComponent implements OnInit {
 
   setNavigation = (data: any) => {
     this.isMain = data.isMainNav ? data.isMainNav : false;
-    console.log(this.isMain)
   }
+
+
+  goToAnchor = (params: string) => {
+    document.getElementById(params).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
+  onWindowScroll = (event: Event) => {
+    let element = this.getScrollingElement();
+    this.displayElem = element.scrollTop >= 150 ? true : false;
+  }
+
+  getScrollingElement(): Element {
+    return document.scrollingElement || document.documentElement;
+  }
+
 
 }

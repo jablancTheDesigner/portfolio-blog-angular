@@ -59,3 +59,13 @@
         }
     }
 }
+
+.backUp{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9;
+    background: $main;
+    color: #fff;
+    padding: 1rem;
+}
