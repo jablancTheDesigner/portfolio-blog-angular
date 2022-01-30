@@ -1,27 +1,30 @@
-<section class="current-job py-14">
+<section class="current-job py-16">
     <div class="container mx-auto px-3 text-center">
 
-        <div class="current-job__title relative ">
-            <span class="current-job__company text-left">Westgate Resorts</span>
-            <span class="current-job__position">Software Engineer III</span>
-            <span class="current-job__duration text-right">2021 - Current</span>
+        <div class="flex flex-col">
+            <div class="current-job__title relative py-2" *ngFor="let experience of experiences"
+                [class.current-job__title--past]="!experience.recent">
+
+                <span class="current-job__company text-left " [class.md:text-2xl]="!experience.recent"
+                    [class.md:text-3xl]="experience.recent" [class.text-xl]="!experience.recent"
+                    [class.text-2xl]="experience.recent">
+                    {{experience.company}}
+                </span>
+
+                <span class="current-job__position tracking-tight" [class.md:text-3xl]="!experience.recent"
+                    [class.md:text-6xl]="experience.recent" [class.text-2xl]="!experience.recent"
+                    [class.text-4xl]="experience.recent">
+                    {{experience.position}}
+                </span>
+
+                <span class="current-job__duration text-right " [class.md:text-2xl]="!experience.recent"
+                    [class.md:text-3xl]="experience.recent" [class.text-xl]="!experience.recent"
+                    [class.text-2xl]="experience.recent">
+                    {{experience.dateStart}} - {{experience.dateEnd || 'Current'}}
+                </span>
+            </div>
         </div>
 
-        <br>
-
-        <div class="current-job__title current-job--md relative ">
-            <span class="current-job__company text-left">Westgate Resorts</span>
-            <span class="current-job__position">Software Engineer II</span>
-            <span class="current-job__duration text-right">2019 - 2021</span>
-        </div>
-
-        <br>
-
-        <div class="current-job__title current-job--sm relative ">
-            <span class="current-job__company text-left">Global Tect Network</span>
-            <span class="current-job__position">Creative Director / Frontend Developer</span>
-            <span class="current-job__duration text-right">2017 - 2019</span>
-        </div>
 
     </div>
 </section>
