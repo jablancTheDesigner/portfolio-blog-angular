@@ -55,13 +55,10 @@
         <div class="nav__links">
             <ul class="nav__link-list {{textClass}}" *ngIf="isMain">
                 <li class="nav__link">
-                    <button (click)="goToAnchor('top')" class="text-white">Home</button>
+                    <button (click)="goToAnchor('projects')" class="text-white">Projects</button>
                 </li>
                 <li class=" nav__link">
-                    <button (click)="goToAnchor('blog')" class="text-white">Blog</button>
-                </li>
-                <li class="nav__link">
-                    <button (click)="goToAnchor('projects')" class="text-white">Projects</button>
+                    <button (click)="goToAnchor('experience')" class="text-white">Experience</button>
                 </li>
             </ul>
             <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">

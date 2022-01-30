@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Project } from 'src/app/domain/project';
 
 @Component({
   selector: 'app-projects-list',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProjectsListComponent implements OnInit {
 
-  @Input() projects: any[] = [];
+  @Input() projects: Project[] = [];
 
   constructor() { }
 

@@ -9,7 +9,7 @@
                         <h1 class="font-bold mb-2 md:mb-4 text-4xl md:text-6xl">Hello. I'm Jahmal Blanchard.
                         </h1>
                         <h3 class="text-lg sm:text-2xl">
-                            A <span>frontend</span>
+                            I'm a <span>frontend</span>
                             focused <span>software engineer</span> with professional
                             experience in building modern <span>user interfaces</span> and
                             <span>experiences</span>.
@@ -30,6 +30,6 @@
     </div>
 </div>
 
-<app-experiences></app-experiences>
+<app-experiences id="experience"></app-experiences>
 
-<app-blog id="blog" [posts]="posts"></app-blog>
+<app-blog id="blog" [posts]="posts" *ngIf="posts.length > 0"></app-blog>

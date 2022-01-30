@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
+import { Post } from 'src/app/domain/post';
+import { Project } from 'src/app/domain/project';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +11,9 @@ import axios from 'axios';
 })
 export class HomeComponent implements OnInit {
 
-  projects: any[] = [];
-  posts: any[] = [];
-  featuredPost: any = null;
+  projects: Project[] = [];
+  posts: Post[] = [];
+  featuredPost: Post = null;
 
   constructor(
     private router: Router,
@@ -19,10 +21,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      console.log(data)
       if (data.projects) {
         this.projects = data.projects;
-        this.posts = data.posts
+        this.posts = data.posts;
       }
     })
   }

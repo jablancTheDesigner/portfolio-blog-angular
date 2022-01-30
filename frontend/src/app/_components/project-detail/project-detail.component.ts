@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
+import { Project } from 'src/app/domain/project';
 
 @Component({
   selector: 'app-project-detail',
@@ -9,7 +10,7 @@ import axios from 'axios';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  project: any = {};
+  project: Project;
   id: number = null;
   error: string = null;
   color = 'color-main';
@@ -22,23 +23,21 @@ export class ProjectDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.data.subscribe(data => {
-      console.log(data)
       if (data.project) {
         this.project = data.project;
         this.parseDescription(this.project);
-        this.checkToole(this.project)
+        this.checkTools(this.project);
       }
     })
   }
 
   parseDescription = (data: any) => {
-    console.log(data.description)
     this.projectDescription = data.description;
     // this.parseDescription = data;
   }
 
 
-  checkToole = (data: any) => {
+  checkTools = (data: any) => {
     this.tools = data.tools.length > 0 ? data.tools : null;
   }
 

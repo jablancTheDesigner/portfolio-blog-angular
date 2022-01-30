@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Project } from 'src/app/domain/project';
 
 @Component({
   selector: 'app-project-image-card',
@@ -7,12 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProjectImageCardComponent implements OnInit {
 
-  @Input() project: any;
+  @Input() project: Project;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.project);
   }
 
 }

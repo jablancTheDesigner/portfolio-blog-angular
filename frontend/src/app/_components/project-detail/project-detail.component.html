@@ -6,7 +6,7 @@
             <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-10">
                 <div class="headline md:w-1/2 flex items-end justify-between md:sticky">
                     <div class="w-full z-10">
-                        <h1 class="headline__text tracking-tighter py-3">
+                        <h1 class="headline__text tracking-tighter py-3 text-3xl md:text-5xl font-bold">
                             {{project.title}}
                         </h1>
                         <p><span class="font-bold">Client:</span> {{project.client}} </p>
@@ -19,11 +19,14 @@
 
                         <p> <span class="font-bold">Tools:</span>
                             <span *ngIf="!tools">N/A</span>
+                            <span *ngIf="tools"
+                                class="ml-2 inline-grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-2">
+                                <span *ngFor="let tool of tools" class="text-center p-1 border text-sm ">
+                                    {{tool}} </span>
+                            </span>
                         </p>
 
-                        <ul *ngIf="tools">
-                            <li *ngFor="let tool of tools">{{tool.name}}</li>
-                        </ul>
+
                     </div>
 
                     <div class="w-full text-left md:sticky md: mt-3">

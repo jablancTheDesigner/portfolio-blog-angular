@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import axios from 'axios';
+import { Project } from 'src/app/domain/project';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -8,7 +9,7 @@ import axios from 'axios';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: any = [];
+  projects: Project[] = [];
   error: string = null;
   color = 'color-main';
 
