@@ -11,4 +11,5 @@ export class Project {
     tools: string[] = [];
     description: string = '';
     logo: Image;
+    codeLink: Url;
 }
