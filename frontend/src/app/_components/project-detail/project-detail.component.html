@@ -12,9 +12,9 @@
                         <p><span class="font-bold">Client:</span> {{project.client}} </p>
 
                         <p> <span class="font-bold">URL:</span>
-                            <span *ngIf="!project.url.link">N/A</span>
+                            <span *ngIf="!project.url">N/A</span>
                             <a href="{{project.url.link}}" class="font-bold ml-1"
-                                *ngIf="project.url.link">{{project.url.name}}</a>
+                                *ngIf="project.url">{{project.url.name}}</a>
                         </p>
 
                         <p> <span class="font-bold">Tools:</span>

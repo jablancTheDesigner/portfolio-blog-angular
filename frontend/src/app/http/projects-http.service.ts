@@ -11,6 +11,9 @@ export class ProjectsHttpService {
       id: 1,
       title: 'SWTGLAW.com',
       client: 'Smith & Williams Trial Group',
+      logo: {
+        src: 'https://jablanc.s3.us-east-2.amazonaws.com/images/swtglaw-logo.png'
+      },
       thumbnail: {
         src: 'https://via.placeholder.com/750x469'
       },
@@ -25,7 +28,6 @@ export class ProjectsHttpService {
           src: 'https://via.placeholder.com/750x469'
         }
       ],
-      url: { link: '', name: '' },
       tools: ['Angular', 'Typescript', 'SCSS', 'Tailwind CSS'],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.'
     },
@@ -71,6 +73,24 @@ export class ProjectsHttpService {
       ],
       url: { link: 'https://jablancthedesigner.github.io/countdown-timer/', name: 'Countdown Timer' },
       tools: ['React', 'SCSS', 'Tailwind CSS'],
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.'
+    },
+    {
+      id: 4,
+      title: 'Kloud9 Kicks Logo Design',
+      client: 'Kloud9 Kicks',
+      logo: {
+        src: 'https://jablanc.s3.us-east-2.amazonaws.com/images/logo-final-chicago.png'
+      },
+      thumbnail: {
+        src: 'https://via.placeholder.com/750x469'
+      },
+      gallery: [
+        {
+          src: 'https://jablanc.s3.us-east-2.amazonaws.com/images/Asset+191.png'
+        }
+      ],
+      tools: ['Illustrator'],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.'
     },
   ];
