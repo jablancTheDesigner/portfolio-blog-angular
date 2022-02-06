@@ -21,7 +21,7 @@ export class NavigationComponent implements OnInit {
     'experience'
   ];
 
-  mobileClosed: boolean = true;
+  mobileShow: boolean = false;
 
   constructor(
     private router: Router,
@@ -39,8 +39,8 @@ export class NavigationComponent implements OnInit {
 
 
   goToAnchor = (params: string) => {
-    if (!this.mobileClosed) {
-      this.openMobile()
+    if (!this.mobileShow) {
+      this.setMobileShow(false)
     }
     setTimeout(() => {
       document.getElementById(params).scrollIntoView({
@@ -60,16 +60,13 @@ export class NavigationComponent implements OnInit {
     return document.scrollingElement || document.documentElement;
   }
 
-  openMobile(): void {
-    if (this.mobileClosed) {
-      document.body.classList.add('nav-body--fixed')
-      this.mobileClosed = false;
+  setMobileShow(show: boolean): void {
+    if (show) {
+      document.body.classList.add('fixed')
     } else {
-      document.body.classList.remove('nav-body--fixed')
-      this.mobileClosed = true;
+      document.body.classList.remove('fixed')
     }
-
+    this.mobileShow = show;
   }
-
 
 }

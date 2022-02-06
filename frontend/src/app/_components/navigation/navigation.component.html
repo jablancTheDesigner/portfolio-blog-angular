@@ -56,7 +56,7 @@
 
             <ul class="nav__link-list nav--desktop {{textClass}}" *ngIf="isMain">
                 <li class="nav__link" *ngFor="let link of links">
-                    <button (click)="goToAnchor(link)" class="text-white capitalize text-xl">
+                    <button (click)="goToAnchor(link)" class="text-white capitalize text-lg">
                         {{link}}
                     </button>
                 </li>
@@ -64,7 +64,7 @@
 
             <ul class="nav__link-list nav--mobile {{textClass}}" *ngIf="isMain">
                 <li class="nav__link">
-                    <button (click)="openMobile()" class="text-white capitalize text-xl">
+                    <button (click)="setMobileShow(true)" class="text-white capitalize text-2xl">
                         <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
                     </button>
                 </li>
@@ -72,14 +72,22 @@
 
             <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">
                 <li class="nav__link">
-                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30 text-xl">Back Home</a>
+                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30 text-lg">
+                        <mat-icon aria-hidden="false" aria-label="Back">back</mat-icon>
+                    </a>
                 </li>
             </ul>
 
             <ul class="nav__link-list nav-mobile nav--mobile nav--closed {{textClass}}" *ngIf="isMain"
-                [class.nav--closed]="mobileClosed">
+                [class.nav--closed]="!mobileShow">
+                <li class="nav__close">
+                    <button (click)="setMobileShow(false)" class="bg-white p-4 shadow-lg">
+                        <mat-icon aria-hidden="false" aria-label="Clear" class="text-2xl" class="text-2xl">clear
+                        </mat-icon>
+                    </button>
+                </li>
                 <li class="nav__link" *ngFor="let link of links">
-                    <button (click)="goToAnchor(link)" class="capitalize text-2xl">
+                    <button (click)="goToAnchor(link)" class="capitalize text-xl">
                         {{link}}
                     </button>
                 </li>

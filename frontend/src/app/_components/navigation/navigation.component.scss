@@ -1,9 +1,5 @@
 @import "../../../styles/colors";
 
-body.nav-body--fixed{
-    position: fixed;
-}
-
 .nav {
     position: relative;
     top: 0;
@@ -80,7 +76,7 @@ body.nav-body--fixed{
                 flex-direction: column;
                 height: 100vh;
                 width: 100vw;
-                background: #fff;
+                background: $main;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -89,8 +85,8 @@ body.nav-body--fixed{
             }
     
             .nav__link{
-                a{
-                    color: $main;
+                button{
+                    color: #fff;
                 }
             }
         }

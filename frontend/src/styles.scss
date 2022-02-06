@@ -5,7 +5,12 @@
 
 $main: #003366;
 
+body.fixed{
+    position: fixed;
+}
+
 html, body {
+    height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,5 +80,3 @@ $col-width: 12;
     }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
