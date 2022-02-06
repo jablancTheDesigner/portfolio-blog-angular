@@ -39,9 +39,7 @@ export class NavigationComponent implements OnInit {
 
 
   goToAnchor = (params: string) => {
-    if (!this.mobileShow) {
-      this.setMobileShow(false)
-    }
+    this.setMobileShow(false)
     setTimeout(() => {
       document.getElementById(params).scrollIntoView({
         behavior: "smooth",
@@ -62,9 +60,9 @@ export class NavigationComponent implements OnInit {
 
   setMobileShow(show: boolean): void {
     if (show) {
-      document.body.classList.add('fixed')
+      document.body.classList.add('nav-fixed')
     } else {
-      document.body.classList.remove('fixed')
+      document.body.classList.remove('nav-fixed')
     }
     this.mobileShow = show;
   }

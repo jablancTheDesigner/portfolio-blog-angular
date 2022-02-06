@@ -5,10 +5,6 @@
 
 $main: #003366;
 
-body.fixed{
-    position: fixed;
-}
-
 html, body {
     height: 100%;
     min-height: 100vh;
@@ -77,6 +73,12 @@ $col-width: 12;
         height:4px;
         background-color: $main;
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body.nav-fixed{
+        position: fixed;
     }
 }
 

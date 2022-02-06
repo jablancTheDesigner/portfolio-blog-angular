@@ -80,14 +80,14 @@
 
             <ul class="nav__link-list nav-mobile nav--mobile nav--closed {{textClass}}" *ngIf="isMain"
                 [class.nav--closed]="!mobileShow">
-                <li class="nav__close">
-                    <button (click)="setMobileShow(false)" class="bg-white p-4 shadow-lg">
+                <li class="nav__close nav__link">
+                    <button (click)="setMobileShow(false)" class="bg-white p-3 shadow-lg">
                         <mat-icon aria-hidden="false" aria-label="Clear" class="text-2xl" class="text-2xl">clear
                         </mat-icon>
                     </button>
                 </li>
                 <li class="nav__link" *ngFor="let link of links">
-                    <button (click)="goToAnchor(link)" class="capitalize text-xl">
+                    <button (click)="goToAnchor(link)" class="capitalize text-xl text-white">
                         {{link}}
                     </button>
                 </li>
@@ -98,5 +98,6 @@
 </nav>
 
 <button (click)="goToAnchor('top')" class="backUp transition ease-in-out" (window:scroll)="onWindowScroll($event)"
-    [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem" *ngIf="isMain">Back
-    Up</button>
+    [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem" *ngIf="isMain">
+    <mat-icon aria-hidden="false" aria-label="Menu">arrow_upward</mat-icon>
+</button>
