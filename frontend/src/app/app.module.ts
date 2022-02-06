@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { ProjectDetailComponent } from './_components/project-detail/project-det
 import { ProjectsListComponent } from './_components/projects-list/projects-list.component';
 import { ExperiencesComponent } from './_components/experiences/experiences.component';
 import { PostsListComponent } from './_components/posts/posts-list/posts-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PostsListComponent } from './_components/posts/posts-list/posts-list.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

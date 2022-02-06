@@ -52,7 +52,7 @@ export class ProjectsHttpService {
           src: 'https://via.placeholder.com/750x469'
         }
       ],
-      url: { link: 'https://jablancthedesigner.github.io/puffessional/', name: 'Puffessional.com' },
+      url: { link: 'https://puffessional.netlify.app/', name: 'Puffessional.com' },
       tools: ['Angular', 'Typescript', 'SCSS', 'Tailwind CSS'],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.'
     },

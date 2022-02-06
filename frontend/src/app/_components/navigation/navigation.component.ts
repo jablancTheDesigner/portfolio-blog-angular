@@ -16,6 +16,13 @@ export class NavigationComponent implements OnInit {
 
   displayElem: boolean = false;
 
+  links: string[] = [
+    'projects',
+    'experience'
+  ];
+
+  mobileClosed: boolean = true;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute) { }
@@ -32,11 +39,16 @@ export class NavigationComponent implements OnInit {
 
 
   goToAnchor = (params: string) => {
-    document.getElementById(params).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    if (!this.mobileClosed) {
+      this.openMobile()
+    }
+    setTimeout(() => {
+      document.getElementById(params).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    })
   }
 
   onWindowScroll = (event: Event) => {
@@ -46,6 +58,17 @@ export class NavigationComponent implements OnInit {
 
   getScrollingElement(): Element {
     return document.scrollingElement || document.documentElement;
+  }
+
+  openMobile(): void {
+    if (this.mobileClosed) {
+      document.body.classList.add('nav-body--fixed')
+      this.mobileClosed = false;
+    } else {
+      document.body.classList.remove('nav-body--fixed')
+      this.mobileClosed = true;
+    }
+
   }
 
 

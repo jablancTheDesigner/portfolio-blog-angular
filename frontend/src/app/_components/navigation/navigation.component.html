@@ -53,19 +53,38 @@
             </svg>
         </div>
         <div class="nav__links">
-            <ul class="nav__link-list {{textClass}}" *ngIf="isMain">
-                <li class="nav__link">
-                    <button (click)="goToAnchor('projects')" class="text-white">Projects</button>
-                </li>
-                <li class=" nav__link">
-                    <button (click)="goToAnchor('experience')" class="text-white">Experience</button>
+
+            <ul class="nav__link-list nav--desktop {{textClass}}" *ngIf="isMain">
+                <li class="nav__link" *ngFor="let link of links">
+                    <button (click)="goToAnchor(link)" class="text-white capitalize text-xl">
+                        {{link}}
+                    </button>
                 </li>
             </ul>
+
+            <ul class="nav__link-list nav--mobile {{textClass}}" *ngIf="isMain">
+                <li class="nav__link">
+                    <button (click)="openMobile()" class="text-white capitalize text-xl">
+                        <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
+                    </button>
+                </li>
+            </ul>
+
             <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">
                 <li class="nav__link">
-                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30">Back Home</a>
+                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30 text-xl">Back Home</a>
                 </li>
             </ul>
+
+            <ul class="nav__link-list nav-mobile nav--mobile nav--closed {{textClass}}" *ngIf="isMain"
+                [class.nav--closed]="mobileClosed">
+                <li class="nav__link" *ngFor="let link of links">
+                    <button (click)="goToAnchor(link)" class="capitalize text-2xl">
+                        {{link}}
+                    </button>
+                </li>
+            </ul>
+
         </div>
     </div>
 </nav>
