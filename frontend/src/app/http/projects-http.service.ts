@@ -9,10 +9,11 @@ export class ProjectsHttpService {
   projects: any[] = [
     {
       id: 1,
-      title: 'SWTGLAW.com',
-      client: 'Smith & Williams Trial Group',
+      title: 'My Portfolio',
+      client: 'Me, Myself, and I',
+      codeLink: 'https://github.com/jablancTheDesigner/portfolio-blog-angular',
       logo: {
-        src: 'https://jablanc.s3.us-east-2.amazonaws.com/images/swtglaw-logo.png'
+        src: 'https://via.placeholder.com/350x150'
       },
       thumbnail: {
         src: 'https://via.placeholder.com/750x469'
