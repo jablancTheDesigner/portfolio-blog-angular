@@ -18,6 +18,9 @@ import { ProjectsListComponent } from './_components/projects-list/projects-list
 import { ExperiencesComponent } from './_components/experiences/experiences.component';
 import { PostsListComponent } from './_components/posts/posts-list/posts-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SectionHeaderComponent } from './_components/section-header/section-header.component';
+import { ContactComponent } from './_components/contact/contact.component';
+import { SuccessComponent } from './_components/form/success/success.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectDetailComponent,
     ProjectsListComponent,
     ExperiencesComponent,
-    PostsListComponent
+    PostsListComponent,
+    SectionHeaderComponent,
+    ContactComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

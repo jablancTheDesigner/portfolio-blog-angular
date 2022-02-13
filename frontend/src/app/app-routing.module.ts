@@ -8,6 +8,7 @@ import { ProjectDetailComponent } from './_components/project-detail/project-det
 import { FindProjectsResolverService } from './routing/resolves/project/find-projects-resolver.service';
 import { FindProjectByIdResolverService } from './routing/resolves/project/find-project-by-id-resolver.service';
 import { FindPostsResolverService } from './routing/resolves/posts/find-posts-resolver.service';
+import { SuccessComponent } from './_components/form/success/success.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,10 @@ const routes: Routes = [
       project: FindProjectByIdResolverService
     },
     component: ProjectDetailComponent
+  },
+  {
+    path: 'success',
+    component: SuccessComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

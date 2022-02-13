@@ -13,8 +13,7 @@
 
                         <p> <span class="font-bold">URL:</span>
                             <span *ngIf="!project.url">N/A</span>
-                            <a href="{{project.url.link}}" class="font-bold ml-1"
-                                *ngIf="project.url">{{project.url.name}}</a>
+                            <a href="{{project.url}}" class="font-bold ml-1" *ngIf="project.url">Go to Site</a>
                         </p>
 
                         <p> <span class="font-bold">Tools:</span>
@@ -50,7 +49,7 @@
                         Logo.
                     </h1>
                     <div *ngIf="project.logo" class="mb-6">
-                        <img src="{{project.logo.src}}" alt="" />
+                        <img src="{{project.logo}}" alt="" />
                     </div>
 
                     <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-3 font-bold tracking-tighter"
@@ -58,7 +57,7 @@
                         Gallery.
                     </h1>
                     <div *ngFor="let img of project.gallery" class="mb-6">
-                        <img src="{{img.src}}" alt="" />
+                        <img src="{{img}}" alt="" />
                     </div>
 
                 </div>
@@ -67,3 +66,5 @@
 
     </div>
 </app-hero>
+
+<app-contact></app-contact>

@@ -18,7 +18,8 @@ export class NavigationComponent implements OnInit {
 
   links: string[] = [
     'projects',
-    'experience'
+    'experience',
+    'contact'
   ];
 
   mobileShow: boolean = false;
