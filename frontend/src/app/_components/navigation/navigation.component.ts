@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NavigatorService } from 'src/app/services/navigator.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -26,7 +27,8 @@ export class NavigationComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private navigator: NavigatorService) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -40,14 +42,8 @@ export class NavigationComponent implements OnInit {
 
 
   goToAnchor = (params: string) => {
-    this.setMobileShow(false)
-    setTimeout(() => {
-      document.getElementById(params).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-    })
+    this.setMobileShow(false);
+    setTimeout(() => this.navigator.goTo(params))
   }
 
   onWindowScroll = (event: Event) => {

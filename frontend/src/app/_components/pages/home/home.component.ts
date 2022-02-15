@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
 import { Post } from 'src/app/domain/post';
 import { Project } from 'src/app/domain/project';
+import { NavigatorService } from 'src/app/services/navigator.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private navigator: NavigatorService) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -26,6 +28,10 @@ export class HomeComponent implements OnInit {
         this.posts = data.posts;
       }
     })
+  }
+
+  goToContact = () => {
+    this.navigator.goTo('contact')
   }
 
 }
