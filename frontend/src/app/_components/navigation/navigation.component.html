@@ -1,6 +1,6 @@
 <nav class="nav z-50" [class.nav--main]='isMain'>
-    <div class="nav__inner md:container mx-auto px-0 md:px-3">
-        <div class="nav__logo md:border-l-2 border-r-2">
+    <div class="nav__inner">
+        <a [routerLink]="['/']" class="nav__logo border-r-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123.92 171.49">
                 <defs>
                     <style>
@@ -51,40 +51,46 @@
                     </g>
                 </g>
             </svg>
-        </div>
+        </a>
         <div class="nav__links">
 
-            <ul class="nav__link-list" *ngIf="isMain">
+            <ul class="nav__link-list">
                 <li class="nav__link nav--desktop" *ngFor="let link of links">
-                    <button (click)="goToAnchor(link)" class="text-white capitalize text-lg">
+                    <a [routerLink]="['/'+link]" class="uppercase text-lg" [class.text-white]="isMain"
+                        [class.text-main]="!isMain">
                         {{link}}
+                    </a>
+                </li>
+                <li class="nav__link nav--desktop">
+                    <button (click)="goToAnchor('contact')" class="uppercase text-lg hover:opacity-50"
+                        [class.text-white]="isMain" [class.text-main]="!isMain">
+                        Contact
                     </button>
                 </li>
                 <li class="nav__link nav--mobile">
-                    <button (click)="setMobileShow(true)" class="text-white capitalize text-2xl">
+                    <button (click)="setMobileShow(true)" class=" capitalize text-2xl" [class.text-white]="isMain"
+                        [class.text-main]="!isMain">
                         <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
                     </button>
                 </li>
             </ul>
 
-            <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">
-                <li class="nav__link">
-                    <a [routerLink]="['/']" class="opacity-100 hover:opacity-30 text-lg">
-                        <mat-icon aria-hidden="false" aria-label="Back">home</mat-icon>
-                    </a>
-                </li>
-            </ul>
-
             <ul class="nav__link-list nav-mobile nav--mobile nav--closed" [class.nav--closed]="!mobileShow">
-                <li class="nav__close nav__link">
+                <li class="nav__close nav__link mb-4">
                     <button (click)="setMobileShow(false)" class="bg-white p-3 shadow-lg">
                         <mat-icon aria-hidden="false" aria-label="Clear" class="text-2xl" class="text-2xl">clear
                         </mat-icon>
                     </button>
                 </li>
-                <li class="nav__link" *ngFor="let link of links">
-                    <button (click)="goToAnchor(link)" class="capitalize text-xl text-white">
+                <li class="nav__link my-8" *ngFor="let link of links">
+                    <a [routerLink]="['/'+link]" class="uppercase text-xl text-white" (click)="setMobileShow(false)">
                         {{link}}
+                    </a>
+                </li>
+                <li class="nav__link mt-8">
+                    <button (click)="goToAnchor('contact')"
+                        class="uppercase text-lg hover:opacity-50 uppercase text-xl text-white">
+                        Contact
                     </button>
                 </li>
             </ul>
@@ -94,6 +100,6 @@
 </nav>
 
 <button (click)="goToAnchor('top')" class="backUp transition ease-in-out" (window:scroll)="onWindowScroll($event)"
-    [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem" *ngIf="isMain">
+    [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem">
     <mat-icon aria-hidden="false" aria-label="Menu">arrow_upward</mat-icon>
 </button>

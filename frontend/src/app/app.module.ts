@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SectionHeaderComponent } from './_components/section-header/section-header.component';
 import { ContactComponent } from './_components/contact/contact.component';
 import { SuccessComponent } from './_components/form/success/success.component';
+import { ExperiencePageComponent } from './_components/pages/experience-page/experience-page.component';
+import { PageLayoutComponent } from './_components/pages/page-layout/page-layout.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { SuccessComponent } from './_components/form/success/success.component';
     PostsListComponent,
     SectionHeaderComponent,
     ContactComponent,
-    SuccessComponent
+    SuccessComponent,
+    ExperiencePageComponent,
+    PageLayoutComponent
   ],
   imports: [
     BrowserModule,

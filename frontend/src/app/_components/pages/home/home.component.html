@@ -3,24 +3,23 @@
 <app-hero isMain="true">
     <div class="md:relative container mx-auto px-3">
         <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
-            <div class="headline md:w-2/3 flex items-center mx-auto">
+            <div class="headline md:w-5/6 flex items-center mx-auto">
                 <div class="headline__text  w-full z-10 text-center">
-                    <h1 class="font-bold mb-2 md:mb-4 text-4xl md:text-6xl tracking-tighter text-white">
+                    <h1 class="font-bold mb-2 md:mb-4 text-4xl md:text-7xl tracking-tighter text-white">
                         Hello. I'm Jahmal, a...
                     </h1>
-                    <h2 class="text-3xl md:text-5xl tracking-tight text-white font-bold mb-6 md:mb-12">
+                    <h2 class="text-3xl md:text-6xl tracking-tight text-white font-bold mb-6 md:mb-12">
                         <span class="typed"></span>
                     </h2>
                     <div>
-                        <h3 class="text-lg sm:text-xl tracking-tight">
-                            I'm a <span>frontend</span>
-                            focused <span>software engineer</span> with professional
-                            experience in building modern <span>user interfaces</span> and
-                            <span>experiences</span>.
-                        </h3>
-                        <button class="underline block text-3xl font-bold text-white mx-auto mt-2"
-                            (click)="goToContact()">Let's work
-                            together.</button>
+                        <button class="block text-3xl font-medium text-white mx-auto mt-4 hover:opacity-50"
+                            (click)="goToContact()">Let's
+                            work
+                            together.<br>
+                            <mat-icon aria-hidden="false" aria-label="Clear" class="text-2xl" class="text-2xl">
+                                keyboard_arrow_down
+                            </mat-icon>
+                        </button>
                     </div>
                 </div>
             </div>

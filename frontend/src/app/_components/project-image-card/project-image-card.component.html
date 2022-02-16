@@ -5,10 +5,11 @@
     <div class="project-image-card__description text-left p-8 space-x-1 shadow-lg">
         <h2 class="text-sm text-white text-2xl font-bold text-white">{{project.id}}. {{project.title}}</h2>
         <p class="text-white">{{project.client}}</p>
-        <div class="flex flex-wrap">
-            <a [routerLink]="['/project', project.id]" class="pt-2 mr-4 block font-bold tracking-tight">Go to
+        <div class="flex flex-wrap flex-col md:flex-row">
+            <a [routerLink]="['/project', project.id]" class="pt-2 mr-4 block font-bold tracking-tight text-xl">Go to
                 Details</a>
-            <a href="{{project.codeLink}}" class="pt-2 mr-2 block font-bold tracking-tight" *ngIf="project.codeLink">Go
+            <a href="{{project.codeLink}}" class="pt-2 block font-bold tracking-tight text-xl"
+                *ngIf="project.codeLink">Go
                 to Code</a>
         </div>
     </div>

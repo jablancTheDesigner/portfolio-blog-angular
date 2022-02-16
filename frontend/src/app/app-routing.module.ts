@@ -9,6 +9,7 @@ import { FindProjectsResolverService } from './routing/resolves/project/find-pro
 import { FindProjectByIdResolverService } from './routing/resolves/project/find-project-by-id-resolver.service';
 import { FindPostsResolverService } from './routing/resolves/posts/find-posts-resolver.service';
 import { SuccessComponent } from './_components/form/success/success.component';
+import { ExperiencePageComponent } from './_components/pages/experience-page/experience-page.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'projects',
         component: ProjectsComponent
+      },
+      {
+        path: 'experience',
+        component: ExperiencePageComponent
       },
       {
         path: 'blog',

@@ -34,7 +34,6 @@
         padding: 0 1rem;
         a {
             text-decoration: none;
-            color: $main;
             text-transform: uppercase;
             opacity: 1;
             transition: 350ms ease-in-out;
@@ -51,12 +50,6 @@
 
         .nav__logo{
             border-color: $second;
-        }
-
-        .nav__link{
-            a{
-                color: $white;
-            }
         }
     }
 
@@ -88,7 +81,7 @@
             }
     
             .nav__link{
-                button{
+                a{
                     margin-bottom: 3rem;
                 }
                 &:last-of-type{
