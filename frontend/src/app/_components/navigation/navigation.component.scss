@@ -12,10 +12,11 @@
     &__logo{
         padding: 1rem  1.5rem;
         background-color: #01274e;
+        border-color: $main;
+        border-style: solid;
         svg{
             width: 40px;  
         }
-        border-right: 2px solid $main;
     }
 
     &__inner{
@@ -49,7 +50,7 @@
         border-bottom: 2px solid $second;
 
         .nav__logo{
-            border-right: 2px solid $second;
+            border-color: $second;
         }
 
         .nav__link{

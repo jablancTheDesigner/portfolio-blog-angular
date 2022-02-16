@@ -1,56 +1,56 @@
 <section class="contact py-16">
     <div class="container mx-auto px-3 text-center">
-        <app-section-header title="Contact Me"></app-section-header>
+        <app-section-header title="Contact Me" typedClass="contact"></app-section-header>
 
-        <div class="error" [class.hidden]="errorMsg.length == 0">
+        <div class="error flex flex-col md:flex-row mb-2" [class.hidden]="errorMsg.length == 0">
             <p>{{errorMsg}}</p>
-            <span (click)="closeError()" class="close">✖︎</span>
+            <span (click)="closeError()" class="close mt-2 md:mt-0 md:ml-auto">✖︎</span>
         </div>
 
         <form [formGroup]="contactForm" name="contactForm" method="POST" (ngSubmit)="onSubmit()">
-            <label class="block mb-3">
-                <span class="block text-lg font-medium text-main">First Name</span>
-                <!-- Using form state modifers, the classes can be identical for every input -->
-                <input type="text" name="firstName" formControlName="firstName" class="mt-2 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500
-                " />
-            </label>
-            <label class="block mb-3">
-                <span class="block text-lg font-medium text-main">Last Name</span>
-                <!-- Using form state modifers, the classes can be identical for every input -->
-                <input type="text" name="lastName" formControlName="lastName" class="mt-2 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500
-                " />
-            </label>
-            <label class="block mb-3">
-                <span class="block text-lg font-medium text-main">Your Email</span>
-                <!-- Using form state modifers, the classes can be identical for every input -->
-                <input type="email" formControlName="email" name="email" class="mt-2 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500
-                " />
-            </label>
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mb-4">
+                <label class="block">
+                    <span class="block text-lg font-medium text-main">First Name</span>
+                    <input type="text" required name="firstName" formControlName="firstName" class="mt-2 block w-full px-3 py-2 bg-white border border-main text-sm shadow-sm placeholder-slate-400
+                      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                      invalid:border-pink-500 invalid:text-pink-600
+                      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                    " />
+                </label>
+                <label class="block">
+                    <span class="block text-lg font-medium text-main">Last Name</span>
+                    <input type="text" required name="lastName" formControlName="lastName" class="mt-2 block w-full px-3 py-2 bg-white border border-main text-sm shadow-sm placeholder-slate-400
+                      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                      invalid:border-pink-500 invalid:text-pink-600
+                      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                    " />
+                </label>
+            </div>
 
-            <label class="block mb-3">
-                <span class="block text-lg font-medium text-main">Message:</span>
-                <!-- Using form state modifers, the classes can be identical for every input -->
-                <textarea name="message" formControlName="message" class="mt-2 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                  invalid:border-pink-500 invalid:text-pink-600
-                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></textarea>
-            </label>
+            <div class="grid gap-4 grid-cols-1">
+                <label class="block">
+                    <span class="block text-lg font-medium text-main">Your Email</span>
+                    <input type="email" required formControlName="email" name="email" class="mt-2 block w-full px-3 py-2 bg-white border border-main text-sm shadow-sm placeholder-slate-400
+                      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                      invalid:border-pink-500 invalid:text-pink-600
+                      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                    " />
+                </label>
+                <label class="block">
+                    <span class="block text-lg font-medium text-main">Message:</span>
+                    <textarea name="message" formControlName="message" class="mt-2 block w-full px-3 py-2 bg-white border border-main text-sm shadow-sm placeholder-slate-400
+                      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                      invalid:border-pink-500 invalid:text-pink-600
+                      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></textarea>
+                </label>
+            </div>
 
-            <button type="submit" [disabled]="contactForm.invalid"
-                class="bg-sky-600 hover:bg-sky-700 text-2xl mt-4">Send</button>
+
+            <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-2xl mt-4">Send</button>
         </form>
 
     </div>

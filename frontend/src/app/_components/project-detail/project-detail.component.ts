@@ -32,7 +32,7 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   parseDescription = (data: any) => {
-    this.projectDescription = data.description;
+    this.projectDescription = JSON.parse(JSON.stringify(data.description));
     // this.parseDescription = data;
   }
 

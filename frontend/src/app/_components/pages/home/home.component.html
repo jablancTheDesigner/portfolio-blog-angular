@@ -5,10 +5,14 @@
         <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
             <div class="headline md:w-2/3 flex items-center mx-auto">
                 <div class="headline__text  w-full z-10 text-center">
-                    <h1 class="font-bold mb-2 md:mb-4 text-4xl md:text-7xl tracking-tighter text-white">Hello. I'm
-                        Jahmal. </h1>
+                    <h1 class="font-bold mb-2 md:mb-4 text-4xl md:text-6xl tracking-tighter text-white">
+                        Hello. I'm Jahmal, a...
+                    </h1>
+                    <h2 class="text-3xl md:text-5xl tracking-tight text-white font-bold mb-6 md:mb-12">
+                        <span class="typed"></span>
+                    </h2>
                     <div>
-                        <h3 class="text-lg sm:text-2xl tracking-tight">
+                        <h3 class="text-lg sm:text-xl tracking-tight">
                             I'm a <span>frontend</span>
                             focused <span>software engineer</span> with professional
                             experience in building modern <span>user interfaces</span> and
@@ -26,7 +30,7 @@
 
 <div id="projects" *ngIf="projects.length > 0" class="py-16">
     <div class="container mx-auto">
-        <app-section-header title="Some of my latest work"></app-section-header>
+        <app-section-header title="Some of my latest work" typedClass="projects"></app-section-header>
         <div *ngFor="let project of projects">
             <app-project-image-card [project]="project"></app-project-image-card>
         </div>

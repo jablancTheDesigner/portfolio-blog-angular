@@ -3,18 +3,18 @@ import { Project } from "src/app/domain/project";
 export const Projects: Project[] = [
     {
         id: 1,
-        title: 'My Portfolio',
+        title: 'My Portfolio Redesign',
         client: 'Me, Myself, and I',
         codeLink: 'https://github.com/jablancTheDesigner/portfolio-blog-angular',
-        logo: "https://via.placeholder.com/350x150",
+        logo: "assets/images/Jablanc-logo.svg",
         thumbnail: 'https://via.placeholder.com/750x469',
         gallery: [
             'https://via.placeholder.com/750x469',
             'https://via.placeholder.com/750x469'
         ],
-        tools: ['Angular', 'Typescript', 'SCSS', 'Tailwind CSS'],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Aliquet eget sit amet tellus cras. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.',
-        url: null,
+        tools: ['Angular', 'TypeScript', 'SCSS', 'Tailwind CSS', 'Netlify', 'JavaScript'],
+        description: 'My portfolio was old and it lacked the use of any modern technology. The use of a modern framework will help with the overall performance of the site. The first version of my portfolio used PHP for templating, HTML, and CSS. This version was ceated using Angular 11, Typescript, and SCSS.',
+        url: 'https://jablanc.netlify.app/',
         featured: true
     }
 ];

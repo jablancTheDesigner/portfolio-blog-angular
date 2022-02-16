@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-section-header',
@@ -8,10 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SectionHeaderComponent implements OnInit {
 
   @Input() title: string;
+  @Input() typedClass: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

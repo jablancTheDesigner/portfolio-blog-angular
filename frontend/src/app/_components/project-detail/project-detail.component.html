@@ -9,33 +9,23 @@
                         <h1 class="headline__text tracking-tighter py-3 text-3xl md:text-5xl font-bold">
                             {{project.title}}
                         </h1>
-                        <p><span class="font-bold">Client:</span> {{project.client}} </p>
+                        <p class="mb-1"><span class="font-bold">Client:</span> {{project.client}} </p>
 
-                        <p> <span class="font-bold">URL:</span>
+                        <p class="mb-1"> <span class="font-bold">URL:</span>
                             <span *ngIf="!project.url">N/A</span>
                             <a href="{{project.url}}" class="font-bold ml-1" *ngIf="project.url">Go to Site</a>
                         </p>
 
-                        <p> <span class="font-bold">Tools:</span>
-                            <span *ngIf="!tools">N/A</span>
-                            <span *ngIf="tools"
-                                class="ml-2 inline-flex flex-wrap md:inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3  gap-2">
-                                <span *ngFor="let tool of tools" class="text-center p-1 border text-sm ">
-                                    {{tool}} </span>
-                            </span>
-                        </p>
-
-
                     </div>
 
-                    <div class="w-full text-left md:sticky md: mt-3">
+                    <div class="w-full text-left md:sticky md: mt-auto">
 
-                        <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-2 font-bold tracking-tighter">
-                            Description.
-                        </h1>
-                        <div class="mb-4">
-                            <div class="text-gray-500 text-sm">
-                                {{projectDescription}}
+                        <div *ngIf="tools">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <span *ngFor="let tool of tools"
+                                    class="text-center p-2 border border-main text-lg font-bold">
+                                    {{tool}}
+                                </span>
                             </div>
                         </div>
 
@@ -44,20 +34,27 @@
                 </div>
                 <div class="md:min-h-screen py-6 md:py-12 items-center md:w-1/2 md:z-40">
 
-                    <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-3 font-bold tracking-tighter"
-                        *ngIf="project.logo">
-                        Logo.
-                    </h1>
-                    <div *ngIf="project.logo" class="mb-6">
+                    <div class="mb-12">
+                        <h1 class="w-full flex-none md:text-2xl text-xl leading-7 mb-2 font-bold tracking-tight">
+                            Description
+                        </h1>
+                        <div class="text-gray-500 text-sm">
+                            <h3 class="text-lg" [innerHTML]="projectDescription"></h3>
+                        </div>
+                    </div>
+
+                    <div *ngIf="project.logo" class="mb-12">
+                        <!-- <h1 class="w-full flex-none md:text-2xl text-xl leading-7 mb-3 font-bold tracking-tight">
+                            Logo
+                        </h1> -->
                         <img src="{{project.logo}}" alt="" />
                     </div>
 
-                    <h1 class="w-full flex-none md:text-3xl text-2xl leading-7 mb-3 font-bold tracking-tighter"
-                        *ngIf="project.gallery">
-                        Gallery.
-                    </h1>
-                    <div *ngFor="let img of project.gallery" class="mb-6">
-                        <img src="{{img}}" alt="" />
+                    <div class="mb-12" *ngIf="project.gallery.length > 0">
+                        <!-- <h1 class="w-full flex-none md:text-2xl text-xl leading-7 mb-3 font-bold tracking-tight">
+                            Gallery
+                        </h1> -->
+                        <img src="{{img}}" alt="" *ngFor="let img of project.gallery" class="mb-4" />
                     </div>
 
                 </div>

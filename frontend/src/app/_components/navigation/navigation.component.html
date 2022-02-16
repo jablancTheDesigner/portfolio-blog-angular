@@ -1,6 +1,6 @@
 <nav class="nav z-50" [class.nav--main]='isMain'>
-    <div class="nav__inner">
-        <div class="nav__logo">
+    <div class="nav__inner md:container mx-auto px-0 md:px-3">
+        <div class="nav__logo md:border-l-2 border-r-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123.92 171.49">
                 <defs>
                     <style>
@@ -70,7 +70,7 @@
             <ul class="nav__link-list {{textClass}}" *ngIf="!isMain">
                 <li class="nav__link">
                     <a [routerLink]="['/']" class="opacity-100 hover:opacity-30 text-lg">
-                        <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+                        <mat-icon aria-hidden="false" aria-label="Back">home</mat-icon>
                     </a>
                 </li>
             </ul>
