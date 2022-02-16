@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       }
     })
     let typed = new Typed('.typed', {
-      strings: ["Web Designer ", "Self Taught Developer ", "Console Gamer", "Football Coach", "Part-time Adult "],
+      strings: ["Web Designer", "Front-end Developer", "Husband", "Console Gamer", "Football Coach"],
       typeSpeed: 50,
       backSpeed: 50,
       smartBackspace: true, // this is a default
