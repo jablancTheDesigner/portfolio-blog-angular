@@ -56,15 +56,15 @@
 
             <ul class="nav__link-list">
                 <li class="nav__link nav--desktop" *ngFor="let link of links">
-                    <a [routerLink]="['/'+link]" class="uppercase text-lg" [class.text-white]="isMain"
+                    <a [routerLink]="['/'+link]" class="uppercase text-lg font-bold" [class.text-white]="isMain"
                         [class.text-main]="!isMain">
-                        {{link}}
+                        {{link}}<span class="text-second">.</span>
                     </a>
                 </li>
                 <li class="nav__link nav--desktop">
-                    <button (click)="goToAnchor('contact')" class="uppercase text-lg hover:opacity-50"
+                    <button (click)="goToAnchor('contact')" class="uppercase text-lg hover:opacity-50 font-bold"
                         [class.text-white]="isMain" [class.text-main]="!isMain">
-                        Contact
+                        Contact<span class="text-second">.</span>
                     </button>
                 </li>
                 <li class="nav__link nav--mobile">
@@ -83,14 +83,15 @@
                     </button>
                 </li>
                 <li class="nav__link my-8" *ngFor="let link of links">
-                    <a [routerLink]="['/'+link]" class="uppercase text-xl text-white" (click)="setMobileShow(false)">
-                        {{link}}
+                    <a [routerLink]="['/'+link]" class="uppercase text-xl text-white font-bold"
+                        (click)="setMobileShow(false)">
+                        {{link}}<span class="text-second">.</span>
                     </a>
                 </li>
                 <li class="nav__link mt-8">
                     <button (click)="goToAnchor('contact')"
-                        class="uppercase text-lg hover:opacity-50 uppercase text-xl text-white">
-                        Contact
+                        class="uppercase text-lg hover:opacity-50 uppercase text-xl text-white font-bold">
+                        Contact<span class="text-second">.</span>
                     </button>
                 </li>
             </ul>

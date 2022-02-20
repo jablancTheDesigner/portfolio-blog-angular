@@ -22,7 +22,7 @@ export class ExperiencesComponent implements OnInit {
       dateEnd: '2021',
     },
     {
-      position: 'Creative Director / Frontend Developer',
+      position: 'Front-end Developer',
       company: 'Global Tech Network',
       dateStart: '2017',
       dateEnd: '2019',

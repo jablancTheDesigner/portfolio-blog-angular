@@ -2,11 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap');
-
-$main: #003366;
+@import "./styles/colors";
 
 .text-main{
     color: $main;
+}
+
+.text-second{
+    color: $second;
 }
 
 
