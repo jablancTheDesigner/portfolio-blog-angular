@@ -4,4 +4,57 @@ $main: #003366;
     h1{
         color: $main;
     }
+
+    &__tools-container{
+        background-color: #f8f8f8;
+    }
+
+    &__tools{
+        background-image: url('../../../assets/images/frontend-logos.jpg');
+        background-repeat: no-repeat;
+        height:150px;
+        width:150px;
+        margin: 0 auto;
+        background-size: 408px auto;
+
+        &--Angular{
+            background-position: -128px -220px;
+        }
+
+        &--SCSS{
+            background-position: -269px -357px;
+        }
+
+        &--HTML{
+            background-position: 31px -47px;
+            background-size: 370px auto;
+        }
+
+        &--CSS{
+            background-position: -108px -47px;
+            background-size: 370px auto;
+        }
+
+        &--JavaScript{
+            background-position: -288px -39px;
+        }
+
+        &--ReactJS{
+            background-position: 24px -220px;
+        }
+
+        &--TypeScript{
+            background-position: -285px -199px;
+        }
+
+        &--TailwindCSS{
+            background-image: url('../../../assets/images/Tailwind_CSS_Logo.png');
+            background-position: center center;
+            background-size:135px auto;
+        }
+    }
+
+    // assets/images/jablanc/jablanc-logo-img@4x.png
 }
+
+

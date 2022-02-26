@@ -4,7 +4,7 @@
             <div class="flex flex-col">
                 <div class="w-5/6 md:w-2/3 mx-auto">
                     <div class="w-full z-10 text-center py-16 text-main">
-                        <h1 class="headline__text tracking-tighter py-3 text-3xl md:text-5xl font-bold mb-6">
+                        <h1 class="headline__text tracking-tighter py-3 text-3xl md:text-6xl font-bold mb-6">
                             {{project.title}}
                         </h1>
                         <p class="mb-1"><span class="font-bold">Client:</span> {{project.client}} </p>
@@ -23,14 +23,15 @@
 
                     </div>
 
-                    <div class="w-full text-left">
-
-                        <div *ngIf="tools">
-                            <div class="grid grid-cols-2 gap-4">
-                                <span *ngFor="let tool of tools"
-                                    class="text-center p-2 border border-main text-lg font-bold text-main">
-                                    {{tool}}
-                                </span>
+                    <div class="w-full md:w-5/6 mx-auto text-left">
+                        <app-section-header [title]="'Tools'"></app-section-header>
+                        <div class="flex flex-wrap gap-4 items-center" *ngIf="tools">
+                            <div *ngFor="let tool of tools"
+                                class="project-details-card__tools-container text-center flex-1">
+                                <div class="project-details-card__tools p-2"
+                                    [ngClass]="tool ? 'project-details-card__tools--'+tool : ''  ">
+                                </div>
+                                <h3 class="text-base font-bold text-white p-1 bg-main">{{tool}}</h3>
                             </div>
                         </div>
 
@@ -39,15 +40,17 @@
                 </div>
                 <div class="md:min-h-screen py-16 items-center w-100 md:w-2/3 md:z-40 mx-auto">
 
+
+
+                    <div *ngIf="project.logo" class="mb-16">
+                        <img src="{{project.logo}}" alt="" class="mx-auto" />
+                    </div>
+
                     <div class="mb-16 text-center">
                         <app-section-header [title]="'Description'"></app-section-header>
                         <div class="text-gray-500 text-sm">
                             <h3 class="text-base md:text-xl" [innerHTML]="projectDescription"></h3>
                         </div>
-                    </div>
-
-                    <div *ngIf="project.logo" class="mb-16 text-center">
-                        <img src="{{project.logo}}" alt="" />
                     </div>
 
                     <div class="mb-16 text-center">

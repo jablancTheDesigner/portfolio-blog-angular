@@ -30,7 +30,7 @@
 <div id="projects" *ngIf="projects.length > 0" class="py-16">
     <div class="container mx-auto">
         <app-section-header title="Some of my latest work" typedClass="projects"></app-section-header>
-        <div *ngFor="let project of projects">
+        <div *ngFor="let project of projects" class="mb-8">
             <app-project-image-card [project]="project"></app-project-image-card>
         </div>
     </div>
