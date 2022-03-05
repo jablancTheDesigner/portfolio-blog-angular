@@ -16,7 +16,7 @@ export const Projects: Project[] = [
     },
     {
         id: 2,
-        title: 'myTodo App',
+        title: 'JustTodo App',
         client: 'Me, Myself, and I',
         codeLink: 'https://github.com/jablancTheDesigner/goals-task-todos',
         logo: null,

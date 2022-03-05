@@ -1,7 +1,10 @@
 <div class="container mx-auto px-3">
-    <div class="md:min-h-screen py-6 md:py-12 flex md:z-40">
-        <div class="w-full grid grid-cols-1 gap-8">
-            <app-project-image-card *ngFor="let project of projects" [project]="project"></app-project-image-card>
-        </div>
+  <div class="md:min-h-screen py-6 md:py-12 flex md:z-40">
+    <div class="w-full grid grid-cols-1 gap-20">
+      <app-project-image-card
+        *ngFor="let project of projects"
+        [project]="project"
+      ></app-project-image-card>
     </div>
+  </div>
 </div>
