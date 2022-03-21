@@ -26,5 +26,44 @@ export const Projects: Project[] = [
         description: 'The goal for this project is to sharpen my skills with the React JS library. For styling, the project uses some custom styling built with CSS and the Tailwind CSS framework. ',
         url: 'https://goals-tasks-todos.netlify.app/',
         featured: true
+    },
+    {
+        id: 3,
+        title: '"The Shop" E-Commerce site made with Firebase',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/puffessional',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: ['ReactJS', 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://puffessional.netlify.app/',
+        featured: true
+    },
+    {
+        id: 4,
+        title: 'My "LinkedIn" clone made with Firebase',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/jpb-linkedin-clone',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: ['ReactJS', 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://linkedin-clone-6fc78.firebaseapp.com/',
+        featured: true
+    },
+    {
+        id: 5,
+        title: 'Blog site made with Firebase',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/jpb-blog',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: ['ReactJS', 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://jpb-blog.netlify.app/',
+        featured: true
     }
 ];
