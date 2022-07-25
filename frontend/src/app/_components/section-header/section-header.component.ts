@@ -10,6 +10,7 @@ export class SectionHeaderComponent implements OnInit {
 
   @Input() title: string;
   @Input() typedClass: string;
+  @Input() align: 'left'|'center' = 'left';
 
   constructor() { }
 

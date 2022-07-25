@@ -33,7 +33,7 @@
 <div id="projects" *ngIf="projects.length > 0" class="py-16">
   <div class="container mx-auto">
     <app-section-header
-      title="Some of my latest work"
+      title="Projects"
       typedClass="projects"
     ></app-section-header>
     <div *ngFor="let project of projects" class="mb-20">
@@ -41,9 +41,5 @@
     </div>
   </div>
 </div>
-
-<app-experiences id="experience"></app-experiences>
-
-<app-blog id="blog" [posts]="posts" *ngIf="posts.length > 0"></app-blog>
 
 <app-contact id="contact"></app-contact>
