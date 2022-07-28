@@ -56,19 +56,25 @@
         z-index: 3;
 
         img {
-            width: 255px;
             margin: 0 auto;
             z-index: 2;
-        }
-    }
+            
+            
+            &.lion{
+                max-width: 350px;
+                width: 100%;
+            }
 
-    .mini-circles{
-        width: 528px;
-        left: 50%;
-        top: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        z-index: 1;
+            &.mini-circles{
+                width: 100%;
+                max-width: 528px;
+                left: 50%;
+                top: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+        }
     }
 
     &__box-illustration{
@@ -262,6 +268,16 @@
         }
         &__facts{
             display: none;
+        }
+        &__illustration{
+    
+            img {
+                
+                &.lion{
+                    max-width: 250px;
+                }
+    
+            }
         }
     }
 }
