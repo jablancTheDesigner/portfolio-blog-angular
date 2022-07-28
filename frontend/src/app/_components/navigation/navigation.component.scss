@@ -21,19 +21,18 @@
     }
 
     &__links{
-        position: absolute;
+        position: fixed;
         top: 1.5rem;
         right: 0;
-        left: 0;
+        left: 100%;
         transition: 350ms ease;
         padding: 0 1.5rem;
-        transform:translateX(100%);
         display: flex;
         z-index: 9;
         
 
         &--open{
-            transform:none;
+            left: 0;
         }
     }
 
@@ -83,6 +82,13 @@
 
         img{
             width: 29px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__link-list{
+            padding: 100px 1rem;
+            text-align: center;
         }
     }
 
