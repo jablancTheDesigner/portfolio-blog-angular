@@ -31,14 +31,14 @@ export class HomeComponent implements OnInit {
       }
     })
     let typed = new Typed('.typed', {
-      strings: ["Designer", "Developer", "Husband", "Gamer", "Coach"],
+      strings: ["Frontend Developer", "UI/UX Designer", "Husband", "Gamer", "Coach"],
       typeSpeed: 50,
       backSpeed: 50,
       smartBackspace: true, // this is a default
       loop: true,
       backDelay: 1000,
       startDelay: 0,
-      cursorChar: '_'
+      cursorChar: '|'
     });
   }
 

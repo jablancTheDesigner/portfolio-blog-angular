@@ -13,16 +13,9 @@ export class NavigationComponent implements OnInit {
   @ViewChild('body')
   body: ElementRef;
 
-  isMain: boolean = false;
-
   displayElem: boolean = false;
 
-  links: string[] = [
-    'projects',
-    'experience'
-  ];
-
-  mobileShow: boolean = false;
+  openLinks:boolean = false;
 
   constructor(
     private router: Router,
@@ -31,17 +24,10 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.setNavigation(data);
     })
   }
 
-  setNavigation = (data: any) => {
-    this.isMain = data.isMainNav ? data.isMainNav : false;
-  }
-
-
   goToAnchor = (params: string) => {
-    this.setMobileShow(false);
     setTimeout(() => this.navigator.goTo(params))
   }
 
@@ -54,13 +40,8 @@ export class NavigationComponent implements OnInit {
     return document.scrollingElement || document.documentElement;
   }
 
-  setMobileShow(show: boolean): void {
-    if (show) {
-      document.body.classList.add('nav-fixed')
-    } else {
-      document.body.classList.remove('nav-fixed')
-    }
-    this.mobileShow = show;
+  menuStatus(): void {
+    this.openLinks = !this.openLinks;
   }
 
 }

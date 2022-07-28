@@ -1,109 +1,103 @@
 @import "../../../styles/colors";
 
 .nav {
-    position: relative;
+    position: absolute;
+    max-width: 1394px;
+    margin: 0 auto;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem;
+    left: 0;
+    right: 0;
+
+    &__logo,
+    &__menu {
+        padding: 25px 1.5rem;
+        img{
+            width: 50px;
+        }
+    }
+
+    &__links{
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        left: 0;
+        transition: 350ms ease;
+        padding: 0 1.5rem;
+        transform:translateX(100%);
+        display: flex;
+        z-index: 9;
+        
+
+        &--open{
+            transform:none;
+        }
+    }
+
+    &__link-list{
+        background: #7696A8 url('/assets/images/mini-circles.svg') no-repeat bottom right;
+        border-radius: 10px;
+        min-height: calc(100vh - 3rem);
+        width: 100%;
+        max-width: 1000px;
+        margin-left: auto;
+        padding: 100px 1rem 100px 123px;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__link{
+        margin-bottom: 1rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        a{
+            font-family: 'Libre Baskerville';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 85px;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        &--active{
+            color: #49C7C9 !important;
+        }
+    }
+
+    &__close-button{
+        position: absolute;
+        top: 40px;
+        right: 1.5rem;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 40px;
+
+        img{
+            width: 29px;
+        }
+    }
+
+
+}
+
+.nav-background{
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid $main;
-
-    &__logo{
-        padding: 1rem  1.5rem;
-        background-color: #01274e;
-        border-color: $main;
-        border-style: solid;
-        svg{
-            width: 40px;  
-        }
-    }
-
-    &__inner{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-    }
-    &__link-list{
-        display: flex;
-        list-style: none;
-        padding:1rem 1.5rem;
-    }
-    &__link{
-        padding: 0 1rem;
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            opacity: 1;
-            transition: 350ms ease-in-out;
-            &:hover,
-            &.active-link {
-                opacity: 0.5;
-            }
-        }
-    }
-
-    &--main{
-        position: absolute;
-        border-bottom: 2px solid $second;
-
-        .nav__logo{
-            border-color: $second;
-        }
-    }
-
-    &--mobile{
-        display: none;
-    }
-
-
-    @media screen and (max-width: 767px) {
-        &--desktop{
-            display: none;
-        }
-        &--mobile{
-            display: flex;
-        }
-
-        .nav-mobile{
-
-            &.nav__link-list{
-                flex-direction: column;
-                height: 100vh;
-                width: 100vw;
-                background: $main;
-                position: fixed;
-                top: 0;
-                left: 0;
-                justify-content: center;
-                align-items: center;
-            }
-    
-            .nav__link{
-                a{
-                    margin-bottom: 3rem;
-                }
-                &:last-of-type{
-                    button{
-                        margin-bottom: 0;
-                    }
-                }
-            }
-
-            .nav__close{
-                button{
-                    background-color: #01274e;
-                color: $second
-                }
-            }
-        }
-
-    
-        &--closed{
-            display: none;
-        }
-    }
+    bottom: 0;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(3px);
+    z-index: 7;
 }
 
 .backUp{

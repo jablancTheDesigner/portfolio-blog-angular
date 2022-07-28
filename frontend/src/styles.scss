@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -24,10 +25,10 @@
 html, body {
     height: 100%;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Barlow', sans-serif;
-}/* You can add global styles to this file, and also import other style files */
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
 
 .container {
     width: 100%;
@@ -45,32 +46,6 @@ html, body {
 .col {
     padding: 0 0.5rem;
     
-}
-
-$i: 12;
-$class-name: 'col';
-$col-width: 12;
-
-@while $i > 0 {
-    .#{$class-name}-#{$i} {
-        width: ($i / $col-width) * 100%;
-    }
-    $i: $i - 1;
-}
-
-@media (max-width: 767px) {
-    $m: 12;
-
-    .row{
-        flex-direction: column;
-    }
-
-    @while $m > 0 {
-        .#{$class-name}-#{$m} {
-            width: 100%;
-        }
-        $m: $m - 1;
-    }
 }
 
 .hero-content{

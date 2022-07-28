@@ -1,6 +1,6 @@
-<app-navigation></app-navigation>
+ <app-navigation></app-navigation>
 
-<app-hero isMain="true">
+<!-- <app-hero isMain="true">
   <div class="md:relative container mx-auto px-3">
     <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
       <div class="headline md:w-5/6 flex items-center mx-auto">
@@ -30,16 +30,60 @@
   </div>
 </app-hero>
 
-<div id="projects" *ngIf="projects.length > 0" class="py-16">
-  <div class="container mx-auto">
-    <app-section-header
-      title="Projects"
-      typedClass="projects"
-    ></app-section-header>
-    <div *ngFor="let project of projects" class="mb-20">
-      <app-project-image-card [project]="project"></app-project-image-card>
+<app-page-layout>
+  <div id="projects" *ngIf="projects.length > 0" class="py-16">
+    <div class="container mx-auto">
+      <app-section-header
+        title="Projects"
+        typedClass="projects"
+      ></app-section-header>
+      <div *ngFor="let project of projects" class="mb-20">
+        <app-project-image-card [project]="project"></app-project-image-card>
+      </div>
     </div>
   </div>
-</div>
+</app-page-layout> -->
 
-<app-contact id="contact"></app-contact>
+
+<section class="home">
+  <div class="home__container">
+    
+    <div class="home__illustration">
+      <img src="/assets/images/jablanc-mascot.svg" alt="">
+      <img src="/assets/images/mini-circles.svg" class="mini-circles" alt="">
+    </div>
+
+      <div class="home__box-illustration home__box--1 home__box--teal"></div>
+      <div class="home__box-illustration home__box--2 home__box--teal"></div>
+      <div class="home__box-illustration home__box--3 home__box--text">
+        <img src="/assets/images/html-icon.svg" alt="">
+      </div>
+      <div class="home__box-illustration home__box--4 home__box--text">JS</div>
+      <div class="home__box-illustration home__box--5 home__box--text">CSS</div>
+      <div class="home__box-illustration home__box--6 home__box--text">
+        <img src="/assets/images/vector-icon.svg" alt="">
+      </div>
+      <div class="home__box-illustration home__box--7 home__box--teal"></div>
+      <div class="home__box-illustration home__box--8 home__box--teal"></div>
+      <div class="home__box-illustration home__box--9 home__box--teal"></div>
+
+      <div class="home__about">
+        <h1>
+          Hi! I’m <br>
+          Jahmal Blanchard
+        </h1>
+        <p>
+          I have an appreciation for good design and a desire to translate visual ideas into working code.
+        </p>
+      </div>
+
+      <div class="home__facts">
+        <p>I am a...</p>
+        <h1>
+          <span class="typed"></span>
+        </h1>
+      </div>
+
+  </div>
+</section>
+

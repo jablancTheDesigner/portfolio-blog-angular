@@ -1,0 +1,22 @@
+@mixin pageStyling {
+    padding: 1.5rem;
+    height: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    max-width: 1394px;
+    min-height: 700px;
+    margin: 0 auto;
+    position: relative;
+
+    &__container {
+        display: flex;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 1rem;
+    }
+}
