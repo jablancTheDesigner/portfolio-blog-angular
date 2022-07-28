@@ -41,7 +41,7 @@
     </ul>
 </div>
 
-<div class="nav-background" *ngIf="openLinks"></div>
+<div class="nav-background" [class.nav-background--open]="openLinks"></div>
 
 <button (click)="goToAnchor('top')" class="backUp transition ease-in-out" (window:scroll)="onWindowScroll($event)"
     [class.opacity-100]="displayElem" [class.opacity-0]="!displayElem">
