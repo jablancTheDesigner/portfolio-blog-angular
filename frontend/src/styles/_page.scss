@@ -1,19 +1,20 @@
 @mixin pageStyling {
-    padding: 1.5rem;
-    height: 100%;
+    min-height: 100%;
     font-family: 'Roboto';
     font-style: normal;
-    max-width: 1394px;
-    min-height: 700px;
-    margin: 0 auto;
     position: relative;
+    background-color: #eeeeee;
+    border-radius: 7px;
+    display: flex;
 
     &__container {
         display: flex;
-        background-color: #eeeeee;
-        border-radius: 10px;
-        height: 100%;
+        flex-grow: 1;
         flex-wrap: wrap;
+        max-width: 1394px;
+        min-height: 650px;
+        margin: 0 auto;
+        position: relative;
     }
 
     @media screen and (max-width: 1024px) {
