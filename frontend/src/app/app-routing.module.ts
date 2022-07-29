@@ -23,21 +23,25 @@ const routes: Routes = [
       {
         path: '',
         data: {
-          isMainNav: true
+          isMainNav: true,
+          animationState: 'home' 
         },
-        component: HomeComponent
+        component: HomeComponent,
       },
       {
         path: 'projects',
-        component: ProjectsComponent
+        component: ProjectsComponent,
+        data: { animationState: 'projects' }
       },
       {
         path: 'experience',
-        component: ExperiencePageComponent
+        component: ExperiencePageComponent,
+        data: { animationState: 'experience' }
       },
       {
-        path: 'blog',
-        component: BlogComponent
+        path: 'writings',
+        component: BlogComponent,
+        data: { animationState: 'writings' }
       },
     ]
   },

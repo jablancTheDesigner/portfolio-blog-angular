@@ -2,7 +2,7 @@
 
 .nav {
     position: absolute;
-    max-width: 1394px;
+    max-width: 100%;
     margin: 0 auto;
     z-index: 9;
     display: flex;
@@ -121,3 +121,33 @@
     padding: 0.5rem;
     
 }
+
+@-webkit-keyframes swing-top-right-fwd {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 180deg);
+              transform: rotate3d(1, 1, 0, 180deg);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes swing-top-right-fwd {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 180deg);
+              transform: rotate3d(1, 1, 0, 180deg);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  
