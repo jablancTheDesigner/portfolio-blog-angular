@@ -26,5 +26,47 @@ export const Projects: Project[] = [
         description: null,
         url: 'https://linkedin-clone-6fc78.firebaseapp.com/',
         featured: true
+    },
+    {
+        id: 3,
+        title: '"The Shop" E-Commerce site made with Firebase',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/puffessional',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: ['ReactJS', 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://puffessional.netlify.app/',
+        featured: true
+    },
+    {
+        id: 4,
+        title: 'Blog site made with Firebase',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/jpb-blog',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: ['ReactJS', 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://jpb-blog.netlify.app/',
+        featured: true
+    },
+    {
+        id: 5,
+        title: 'Cool Navigation',
+        client: 'Me, Myself, and I',
+        codeLink: 'https://github.com/jablancTheDesigner/minimalist-nav',
+        logo: null,
+        thumbnail: null,
+        gallery: [],
+        tools: [ 'SCSS', 'HTML', 'JavaScript'],
+        description: null,
+        url: 'https://jablancthedesigner.github.io/minimalist-nav/',
+        featured: true
     }
+    
 ];
+
+
